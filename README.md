@@ -33,7 +33,7 @@
 > **Just bought a VPS and have no idea what to do?** This tool is exactly for
 > you. It detects your server, tells you which control panel actually fits
 > *your* RAM / CPU / distro, runs the panel's **latest official installer**,
-> and later removes it cleanly — with a beginner guide in **English and Roman
+> and later removes it cleanly - with a beginner guide in **English and Roman
 > Urdu** built right in.
 
 ---
@@ -57,7 +57,7 @@
 ## 🧾 What is this?
 
 **VPS WebHoster** is a single Bash script that turns a blank Linux VPS into a
-managed hosting server — without reading 50 tutorials.
+managed hosting server - without reading 50 tutorials.
 
 | It does | It does NOT |
 |---|---|
@@ -116,28 +116,28 @@ Then follow the menu:
 ## 🧭 What's inside the menu?
 
 <details>
-<summary><b>1️⃣ System Detection &amp; Info</b> — click to expand</summary>
+<summary><b>1️⃣ System Detection &amp; Info</b> - click to expand</summary>
 
 Prints OS family, normalized version token, architecture, RAM, CPU cores,
-disk, virtualization, public IP — and a compatibility row for **all 8
+disk, virtualization, public IP - and a compatibility row for **all 8
 panels** with the exact reason if one doesn't fit:
 
 ```text
- [OK ] HestiaCP         compatible — 1024MB min
- [OK ] CloudPanel       compatible — 2048MB min
+ [OK ] HestiaCP         compatible - 1024MB min
+ [OK ] CloudPanel       compatible - 2048MB min
  [--] CyberPanel        needs x86_64, you have aarch64
- [OK ] aaPanel          compatible — 512MB min
+ [OK ] aaPanel          compatible - 512MB min
 ```
 
 </details>
 
 <details>
-<summary><b>2️⃣ Install Website Control Panel</b> — ★ recommendation on top</summary>
+<summary><b>2️⃣ Install Website Control Panel</b> - ★ recommendation on top</summary>
 
 1. You answer **"What will you host?"**
    (WordPress/PHP · Node/Python/Go · Email + DNS + PostgreSQL ·
    Hosting business · Learning)
-2. The list is **ranked** — the recommended panel appears first with its
+2. The list is **ranked** - the recommended panel appears first with its
    score and reason, e.g.:
 
    ```text
@@ -154,7 +154,7 @@ panels** with the exact reason if one doesn't fit:
 </details>
 
 <details>
-<summary><b>4️⃣ Remove Panel Cleanly</b> — click to expand</summary>
+<summary><b>4️⃣ Remove Panel Cleanly</b> - click to expand</summary>
 
 1. Auto-detects installed panels by their marker paths
 2. Big **BACK UP FIRST** warning + confirmation
@@ -172,7 +172,7 @@ panels** with the exact reason if one doesn't fit:
 </details>
 
 <details>
-<summary><b>5️⃣ Junk Cleaner</b> — click to expand</summary>
+<summary><b>5️⃣ Junk Cleaner</b> - click to expand</summary>
 
 Checklist with **disk used before/after**:
 
@@ -193,7 +193,7 @@ Never touches `/var/www`, website files or database dumps.
 </details>
 
 <details>
-<summary><b>6️⃣ Security Hardening</b> — click to expand</summary>
+<summary><b>6️⃣ Security Hardening</b> - click to expand</summary>
 
 - **Firewall**: `ufw` (Debian/Ubuntu, deny incoming + allow SSH) or
   `firewalld` (AlmaLinux/Rocky/CentOS)
@@ -208,21 +208,21 @@ Never touches `/var/www`, website files or database dumps.
 
 ## 🖥️ The 8 panels
 
-All free or freemium — verified against **official docs** (Oct 2026).
+All free or freemium - verified against **official docs** (Oct 2026).
 
 | # | Panel | License | Min RAM | Standout |
 |---|---|---|---|---|
-| ⭐ | **[HestiaCP](https://hestiacp.com/docs/introduction/getting-started)** | 100% free (GPL) | 1 GB | **PostgreSQL + custom DNS + full mail** — most complete cPanel alternative |
+| ⭐ | **[HestiaCP](https://hestiacp.com/docs/introduction/getting-started)** | 100% free (GPL) | 1 GB | **PostgreSQL + custom DNS + full mail** - most complete cPanel alternative |
 | ⭐ | **[CloudPanel](https://www.cloudpanel.io/docs/)** | Free CE | 2 GB | Lightest modern UI, **Varnish**, **MariaDB**, PHP/Node/Python/Go, ARM64 |
 | | **[aaPanel](https://www.aapanel.com/docs/guide/quickstart.html)** | Free (Pro paid) | **512 MB** | Lowest RAM, runs on Ubuntu+Debian+**Alma+Rocky**, free WAF |
 | | **[CyberPanel](https://cyberpanel.net/KnowledgeBase/home/install-cyberpanel/)** | Free (Pro paid) | 1 GB | **OpenLiteSpeed** = fastest PHP/WordPress, PowerDNS |
-| | **[Virtualmin GPL](https://www.virtualmin.com/download/)** | 100% free (GPL) | 1 GB | Most mature — mail, DNS, PostgreSQL, ARM64, powerful CLI |
+| | **[Virtualmin GPL](https://www.virtualmin.com/download/)** | 100% free (GPL) | 1 GB | Most mature - mail, DNS, PostgreSQL, ARM64, powerful CLI |
 | | **[ISPConfig](https://www.ispconfig.org/documentation/)** | 100% free (GPL) | 1 GB | True **multi-server** / reseller panel, ARM64 |
 | | **[FastPanel](https://kb.fastpanel.direct/quick_start/how-to-install-fastpanel/)** | Free license | 1 GB | Modern UI, free **commercial** license, official uninstaller |
 | | **[CWP](https://control-webpanel.com/installation-instructions)** | Free (Pro paid) | 2 GB | Enterprise security for **AlmaLinux/Rocky** |
 
 <details>
-<summary><b>Pros &amp; cons of each panel (short version)</b> — full write-ups in <a href="./docs/en/panels.md">docs/en/panels.md</a></summary>
+<summary><b>Pros &amp; cons of each panel (short version)</b> - full write-ups in <a href="./docs/en/panels.md">docs/en/panels.md</a></summary>
 
 | Panel | ✅ Pros | ❌ Cons |
 |---|---|---|
@@ -235,7 +235,7 @@ All free or freemium — verified against **official docs** (Oct 2026).
 | **FastPanel** | Free commercial license, modern UI, **official uninstall command** | x86_64 only; email license activation; smaller community |
 | **CWP** | Strong security (CSF, ClamAV, ModSecurity), great PHP selector | RHEL only; 2 GB min; **no uninstaller** ("reinstall the OS") |
 
-**Deliberately excluded:** VestaCP (unmaintained — use HestiaCP), cPanel /
+**Deliberately excluded:** VestaCP (unmaintained - use HestiaCP), cPanel /
 Plesk / DirectAdmin (paid), Sentora (abandoned).
 
 </details>
@@ -244,7 +244,7 @@ Plesk / DirectAdmin (paid), Sentora (abandoned).
 
 ## ⭐ Which panel should you pick?
 
-The script answers this automatically — but here's the human version:
+The script answers this automatically - but here's the human version:
 
 | Your server / need | Pick |
 |---|---|
@@ -271,7 +271,7 @@ df               →  disk GB
 
 Each panel carries a **support matrix** (OS tokens × architecture × min
 RAM × min disk). Panels that don't fit are shown **greyed out with the
-exact reason** — never silently hidden.
+exact reason** - never silently hidden.
 
 The recommendation score is transparent:
 
@@ -295,7 +295,7 @@ Two beginner-shaped problems, two menu options:
   trash) and prints `before → after`. Your site files and databases are
   never touched.
 - **Remove Panel Cleanly** → the reverse of installing: services stopped,
-  packages purged, files and users removed, ports verified — plus an
+  packages purged, files and users removed, ports verified - plus an
   optional full web-stack purge.
 
 Full details: **[docs/en/script-guide.md](./docs/en/script-guide.md)** ·
@@ -324,16 +324,20 @@ sudo bash vps-webhoster.sh --version           # version
 
 ## 📘 Documentation for beginners
 
-Everything is written twice — **English** and **Roman Urdu (اردو)**:
+Everything is written twice - **English** and **Roman Urdu (اردو)**:
 
 | 📖 English | 📖 Roman Urdu (اردو) | What's inside |
 |---|---|---|
 | [Beginner Guide](./docs/en/beginner-guide.md) | [.beginner Guide](./docs/ur/beginner-guide.md) | What is a control panel? What is SSH? The difference + real-world examples + how to connect with PuTTY/Terminal |
 | [The Panels](./docs/en/panels.md) | [Panels](./docs/ur/panels.md) | Every panel's features, **pros & cons**, official install/uninstall commands, who each is for |
 | [Script Guide](./docs/en/script-guide.md) | [Script Guide](./docs/ur/script-guide.md) | Every menu option explained (incl. junk cleaner), CLI flags, logging, troubleshooting |
+| [What is SSH?](./docs/en/what-is-ssh.md) | [SSH kya hai?](./docs/ur/what-is-ssh.md) | SSH explained from zero: password vs keys, PuTTY/Terminal steps, everyday commands, troubleshooting table |
+| [What is a WAF?](./docs/en/what-is-waf.md) | [WAF kya hai?](./docs/ur/what-is-waf.md) | Web Application Firewall in plain English: SQLi/XSS explained, firewall vs WAF vs fail2ban, how to enable it per panel, false positives |
+| [Linux for Windows users](./docs/en/linux-for-windows-users.md) | [Windows user ke liye Linux](./docs/ur/linux-for-windows-users.md) | What a "distribution" is, Debian vs RHEL families, Windows↔Linux term translation, how to try Linux safely (WSL/Live USB) |
+| [Linux commands cheat sheet](./docs/en/linux-commands.md) | [Linux commands ki list](./docs/ur/linux-commands.md) | 100+ commands with plain-English definitions, examples and *when to use them* + the 20 you'll actually use daily |
 
 > **Start here if you have never used a server:**
-> [docs/en/beginner-guide.md](./docs/en/beginner-guide.md) —
+> [docs/en/beginner-guide.md](./docs/en/beginner-guide.md) -
 > control panel = TV remote / hotel reception, SSH = your own key to the
 > server room. It all clicks after one read.
 
@@ -344,7 +348,7 @@ Everything is written twice — **English** and **Roman Urdu (اردو)**:
 <details>
 <summary><b>Is it really free?</b></summary>
 
-Yes — the script is MIT licensed and every panel in the list is free or has a
+Yes - the script is MIT licensed and every panel in the list is free or has a
 genuinely usable free mode. Panels with paid extras (aaPanel Pro,
 CyberPanel Pro, CWP Pro) are marked as freemium. Paid-only panels are not
 included at all.
@@ -361,10 +365,10 @@ restore. The script warns you if it detects an existing panel.
 </details>
 
 <details>
-<summary><b>My server is ARM64 — which panels work?</b></summary>
+<summary><b>My server is ARM64 - which panels work?</b></summary>
 
 **HestiaCP, CloudPanel, Virtualmin and ISPConfig** officially support
-`aarch64`. aaPanel/CyberPanel/FastPanel/CWP are x86_64-only — the script
+`aarch64`. aaPanel/CyberPanel/FastPanel/CWP are x86_64-only - the script
 will show them as incompatible with the reason.
 
 </details>
@@ -373,7 +377,7 @@ will show them as incompatible with the reason.
 <summary><b>Does the script test anything by running it?</b></summary>
 
 Development follows one rule: **static checks only** (`bash -n`,
-`shellcheck`) — the script itself is never executed automatically, because it
+`shellcheck`) - the script itself is never executed automatically, because it
 changes servers. You run it, on your machine, on your choice.
 
 </details>
@@ -399,9 +403,9 @@ On production servers a fresh OS install is still the safest way.
 ## 🤝 Contributing & license
 
 Bug fixes, panel updates (install commands change!) and Roman Urdu
-improvements are welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
+improvements are welcome - see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-**License:** [MIT](./LICENSE) — Copyright (c) 2026 **Hayder**
+**License:** [MIT](./LICENSE) - Copyright (c) 2026 **Hayder**
 
 <p align="center">
   Made with care by <b>Hayder</b><br>

@@ -1,8 +1,8 @@
-# 🖥️ Panels — Har Free Control Panel ka Mukammal Bayan
+# 🖥️ Panels - Har Free Control Panel ka Mukammal Bayan
 
 > **Zaban:** [English](../en/panels.md) | **اردو (Roman Urdu)**
 >
-> **VPS WebHoster** ka hissa — [README par wapsi](../../README.ur.md)
+> **VPS WebHoster** ka hissa - [README par wapsi](../../README.ur.md)
 
 Is list ka har panel **free** hai ya uska **free mode** waqai kaam karta hai.
 Paid panels (cPanel ≈ $15+/month, Plesk, DirectAdmin) ko jaan bujh kar
@@ -17,7 +17,7 @@ Paid panels (cPanel ≈ $15+/month, Plesk, DirectAdmin) ko jaan bujh kar
 | **HestiaCP** | 100% free (GPL) | Debian 12/13, Ubuntu 22.04/24.04/26.04 | x86 + **ARM64** | 1GB* | 8083 | PostgreSQL + custom DNS + pura mail |
 | **CloudPanel** | Free CE | Debian 11/12/13, Ubuntu 22.04/24.04/26.04 | x86 + **ARM64** | 2GB | 8443 | Sab se halka modern UI, Varnish, Node/Python |
 | **aaPanel** | Free (Pro paid) | Ubuntu, Debian, AlmaLinux, Rocky, CentOS 9+ | x86_64 | **512MB** | dynamic | Sab se kam RAM, dono family par chalta hai |
-| **CyberPanel** | Free (Pro paid) | Ubuntu 20.04/22.04/24.04, Alma/Rocky 8-9 | x86_64 | 1GB | 8090 | OpenLiteSpeed — sab se tez PHP |
+| **CyberPanel** | Free (Pro paid) | Ubuntu 20.04/22.04/24.04, Alma/Rocky 8-9 | x86_64 | 1GB | 8090 | OpenLiteSpeed - sab se tez PHP |
 | **Virtualmin GPL** | 100% free (GPL) | Alma/Rocky 8-10, Debian 11/12, Ubuntu 20.04-24.04 | x86 + **ARM64** | 1GB | 10000 | Sab se purana, mail/DNS/PostgreSQL mukammal |
 | **ISPConfig** | 100% free (GPL) | Debian 11/12/13, Ubuntu 22.04/24.04 | x86 + **ARM64** | 1GB | 8080 | Asal multi-server / reseller |
 | **FastPanel** | Free license | Debian 9-12, Ubuntu 18.04-24.04, Alma/Rocky 8 | x86_64 | 1GB | 8888 | Modern UI, free commercial license |
@@ -30,8 +30,8 @@ poore experience ke liye 4GB recommended.
 
 ## ⭐ Aapke server ke liye kaunsa recommended hai?
 
-Script **aapka** RAM, CPU, distro aur aapke jawab — *"What will you host?"* —
-se ranking khud banati hai:
+Script **aapka** RAM, CPU, distro aur aapke jawab (*"What will you host?"*) ki
+buniyad par ranking khud banati hai:
 
 | Aapki soorat | Recommended | Wajah |
 |---|---|---|
@@ -46,7 +46,7 @@ se ranking khud banati hai:
 
 ---
 
-## 1. HestiaCP — sab se mukammal free cPanel alternative
+## 1. HestiaCP - sab se mukammal free cPanel alternative
 
 - **Docs:** <https://hestiacp.com/docs/introduction/getting-started>
 - **License:** 100% free, GPL. Koi paid edition nahi.
@@ -61,26 +61,26 @@ se ranking khud banati hai:
 
 **✅ Fawada**
 
-- Waqai free, bara friendly community
+- Waqai free, bohat bara friendly community
 - **PostgreSQL** aur **custom DNS (BIND + DNSSEC)** shuru se maujood
-- Pura mail server (Exim + Dovecot) — email hosting bech sakte hain
+- Pura mail server (Exim + Dovecot) - email hosting bech sakte hain
 - **ARM64** aur x86_64 dono par chalta hai
 - Beginners ke liye saaf interface (file manager, web terminal, API)
-- Ek installer: Nginx+Apache, MariaDB, FTP, fail2ban, backups — sab set
+- Ek installer: Nginx+Apache, MariaDB, FTP, fail2ban, backups - sab set
 
 **❌ Nuksaan**
 
 - Poora stack (mail + DNS + ClamAV + SpamAssassin) ko ~4GB RAM chahiye
 - Nginx+Apache combo pure Nginx se zyada RAM khata hai
-- Sirf Debian/Ubuntu — **AlmaLinux/Rocky nahi**
-- Official uninstaller nahi (hamara script ehtiyat se saaf karta hai)
+- Sirf Debian/Ubuntu - **AlmaLinux/Rocky nahi**
+- Official uninstaller nahi (is script ka Remove option ehtiyat se saaf karta hai)
 
 **Kis ke liye:** hosting business, reseller, jo email hosting, PostgreSQL ya
 apne nameservers chahte hain.
 
 ---
 
-## 2. CloudPanel — PHP / Node / Python ke liye sab se halka panel
+## 2. CloudPanel - PHP / Node / Python ke liye sab se halka panel
 
 - **Docs:** <https://www.cloudpanel.io/docs/>
 - **License:** Free Community Edition; Enterprise paid hai
@@ -92,11 +92,11 @@ apne nameservers chahte hain.
   ```
 
 - **Uninstall:** `apt remove --purge cloudpanel` (+ MOTD/host changes ki
-  safaai — script khud karti hai)
+  safaai - script khud karti hai)
 
 **✅ Fawada**
 
-- Kam RAM/CPU — interface bohat tez khulta hai
+- Kam RAM/CPU - interface bohat tez khulta hai
 - **Varnish cache built-in** (docs ke mutabiq pages 250x tak tez)
 - **MariaDB**, Redis, free SSL, 2FA, SFTP, monitoring
 - **Node.js, Python, Go** projects ka native support (panels mein rare!)
@@ -105,7 +105,7 @@ apne nameservers chahte hain.
 
 **❌ Nuksaan**
 
-- **Mail server nahi** — bahar ka SMTP use karein (Mailgun, SES, SendGrid)
+- **Mail server nahi** - bahar ka SMTP use karein (Mailgun, SES, SendGrid)
 - 2GB RAM minimum
 - **PostgreSQL nahi** (sirf MariaDB/MySQL)
 - Community Edition source-available hai, pura OSI open-source nahi
@@ -116,7 +116,7 @@ asaani chahte hain, email hosting nahi chahiye.
 
 ---
 
-## 3. aaPanel — sab se kam RAM wala, sab se zyada distro wala
+## 3. aaPanel - sab se kam RAM wala aur sab se zyada distro par chalne wala
 
 - **Docs:** <https://www.aapanel.com/docs/guide/quickstart.html>
 - **License:** Free; advanced cheezein paid "Pro" plugins
@@ -134,28 +134,28 @@ asaani chahte hain, email hosting nahi chahiye.
   service bt stop && update-rc.d -f bt remove && rm -f /etc/init.d/bt && rm -rf /www/server/panel
   ```
 
-  (RHEL family par `update-td.d` ki jagah `chkconfig --del bt`)
+  (RHEL family par `update-rc.d` ki jagah `chkconfig --del bt`)
 
 **✅ Fawada**
 
 - **512MB RAM minimum**; khud panel sirf ~60MB use karta hai
-- **Ubuntu, Debian, AlmaLinux, Rocky AND CentOS** — is list ka sab se bara OS support
+- **Ubuntu, Debian, AlmaLinux, Rocky AND CentOS** - is list ka sab se wasee OS support
 - **Free WAF** (web firewall) shamil
 - One-click LNMP/LAMP, app store, WP Toolkit, Docker manager, Node projects
-- Pehli baar server lene walon ke liye sab se asaan
+- Pehli baar server lene walon ke liye sab se aasaan hai
 
 **❌ Nuksaan**
 
 - Zyada tar advanced cheezein paid Pro plugins hain
-- ARM64 **unofficial/partial** — x86_64 VPS lein
+- ARM64 **unofficial/partial** - x86_64 VPS lein
 - Interface par paid modules ki promotion dikhti hai
-- Hestia/CyberPanel jitna bara English community nahi
+- English community Hestia/CyberPanel jitni bari nahi
 
 **Kis ke liye:** chhote 1–2GB VPS, AlmaLinux/Rocky users, bilkul naye log.
 
 ---
 
-## 4. CyberPanel — speed ka panel (OpenLiteSpeed)
+## 4. CyberPanel - speed ka panel (OpenLiteSpeed)
 
 - **Docs:** <https://cyberpanel.net/KnowledgeBase/home/install-cyberpanel/>
 - **License:** Free edition (OpenLiteSpeed, unlimited domains) + paid
@@ -171,7 +171,7 @@ asaani chahte hain, email hosting nahi chahiye.
 **✅ Fawada**
 
 - Kisi bhi free panel se **tez PHP/WordPress performance** (OpenLiteSpeed)
-- **PowerDNS** shamil → apne nameservers aasan
+- **PowerDNS** shamil → apne nameservers banana aasan
 - Redis object caching, mail (Postfix+Dovecot), FTP, WordPress manager,
   Docker manager, backups, resellers
 - Free edition par bhi unlimited domains
@@ -179,18 +179,18 @@ asaani chahte hain, email hosting nahi chahiye.
 
 **❌ Nuksaan**
 
-- **Sirf x86_64** — ARM64 nahi (unke issue tracker par abhi bhi request pending)
+- **Sirf x86_64** - ARM64 nahi (unke issue tracker par abhi bhi request pending)
 - **PostgreSQL nahi** (sirf MariaDB)
 - **Debian nahi** (Ubuntu + Alma/Rocky sirf)
 - Official uninstaller nahi
-- Installer kai sawaal puchta hai (LiteSpeed version, add-ons) — script
+- Installer kai sawaal puchta hai (LiteSpeed version, add-ons) - script
   seedha usi mein le jati hai
 
 **Kis ke liye:** high-traffic WordPress/PHP sites jahan kachi speed zaroori ho.
 
 ---
 
-## 5. Virtualmin GPL — sab se purana aur mukammal free panel
+## 5. Virtualmin GPL - sab se purana aur mukammal free panel
 
 - **Docs:** <https://www.virtualmin.com/download/>
 - **License:** 100% free, GPL. Koi paid edition hi nahi.
@@ -206,23 +206,23 @@ asaani chahte hain, email hosting nahi chahiye.
 **✅ Fawada**
 
 - 20+ saal ka development; free panels ka "ustad"
-- **PostgreSQL + BIND DNS + mail + FTP + quotas** — pura classic hosting
+- **PostgreSQL + BIND DNS + mail + FTP + quotas** - pura classic hosting
 - **RHEL family AND Debian family**, **ARM64** ke saath
 - Bohat taqatwar CLI (`virtualmin` command) automation ke liye
-- 100+ Webmin modules se har cheez extend hoti hai
+- 100+ Webmin modules se har cheez extend ho jati hai
 
 **❌ Nuksaan**
 
 - Interface CloudPanel/aaPanel ke muqable purana lagta hai
 - Total beginner ke liye seekhna thoda mushkil
-- Default mein bohat services install karta hai (faltu wale band karein)
+- Default mein yeh bohat si services install kar deta hai (faltu wale band karein)
 
 **Kis ke liye:** sysadmins, Debian/Alma users jo mukammal control chahte hain,
 free PostgreSQL hosting, automation pasand karne wale.
 
 ---
 
-## 6. ISPConfig — professional multi-server panel
+## 6. ISPConfig - professional multi-server panel
 
 - **Docs:** <https://www.ispconfig.org/documentation/>
 - **License:** 100% free, GPL
@@ -237,27 +237,27 @@ free PostgreSQL hosting, automation pasand karne wale.
 **✅ Fawada**
 
 - 100% free, koi paid tier nahi
-- **Asal multi-server** — web, DNS, mail aur DB alag machines par, ek
-  interface se control
+- **Asal multi-server** - web, DNS, mail aur DB alag machines par chalti hain,
+ek interface se control hoti hain
 - MySQL **aur** PostgreSQL, BIND DNS, mail, resellers, quotas
 - Official auto-installer mein **ARM64 support**
-- Neeche standard Debian/Ubuntu packages chalte hain (debug karna asaan)
+- Neeche standard Debian/Ubuntu packages istemal hote hain (debug karna aasaan)
 
 **❌ Nuksaan**
 
-- CloudPanel/aaPanel se install karna bhaari/ahista
+- CloudPanel/aaPanel ke muqable install karna bhaari aur ahista hai
 - Kaam ka lekin simple interface
 - Official uninstaller nahi
 
-**Kis ke liye:** hosting companies jo aage clusters tak barhna chahti hain;
+**Kis ke liye:** hosting companies jinhe aage barh kar clusters banane hain;
 classic ISP-style setup.
 
 ---
 
-## 7. FastPanel — modern UI + waqai free license
+## 7. FastPanel - modern UI + waqai free license
 
 - **Docs:** <https://kb.fastpanel.direct/quick_start/how-to-install-fastpanel/>
-- **License:** Free lifetime license — personal **aur** commercial dono ke
+- **License:** Free lifetime license - personal **aur** commercial dono ke
   liye (install ke baad email se milti hai)
 - **Install:**
 
@@ -276,9 +276,9 @@ classic ISP-style setup.
 
 **✅ Fawada**
 
-- Agency jo hosting bechti ho uske liye bhi free license
+- Un agencies ke liye bhi free license jo hosting bechti hain
 - Bohat modern, saaf, tez interface; HTTP/3 support
-- **Official uninstall command** — panels mein rare!
+- **Official uninstall command** - panels mein rare!
 - Debian **aur** AlmaLinux/Rocky
 - Install ke waqt MySQL version choose kar sakte hain
 
@@ -287,14 +287,14 @@ classic ISP-style setup.
 - Sirf x86_64 (ARM64 nahi)
 - Email se free license activation zaroori
 - Hestia/CyberPanel jitna bara community nahi
-- **Bilkul fresh OS** par hi install ho sakta hai
+- **Sirf bilkul fresh OS** par hi install ho sakta hai
 
-**Kis ke liye:** freelancers/agencies jinhe paise diye bina commercial-friendly
+**Kis ke liye:** freelancers/agencies jinhe bina kisi paise ke commercial-friendly
 saaf panel chahiye.
 
 ---
 
-## 8. CWP (Control Web Panel) — AlmaLinux ke liye enterprise security
+## 8. CWP (Control Web Panel) - AlmaLinux ke liye enterprise security
 
 - **Docs:** <https://control-webpanel.com/installation-instructions>
 - **License:** Free core + CWPpro paid
@@ -311,7 +311,7 @@ saaf panel chahiye.
 
   *(EL8 / AlmaLinux 8 ke liye `cwp-el8-latest`, CentOS 7 ke liye `cwp-el7-latest`)*
 
-- **Uninstall:** **koi nahi** — unki official baat: *"CWP mein uninstaller
+- **Uninstall:** **koi nahi** - unki official baat: *"CWP mein uninstaller
   nahi hai. Hatane ke liye… server ka OS dobara install karna padta hai."*
   Hamara script ehtiyat se best-effort safaai karta hai, lekin production
   server par fresh OS hi mehfooz jawab hai.
@@ -330,8 +330,8 @@ saaf panel chahiye.
 - Fresh OS par hi chal sakta hai
 - Official uninstaller nahi
 
-**Kis ke liye:** AlmaLinux/Rocky servers jahan bohat PHP apps chhti hain aur
-hardened security chahiye.
+**Kis ke liye:** AlmaLinux/Rocky servers jahan bohat si PHP apps chalti hain
+aur hardened security chahiye.
 
 ---
 
@@ -339,16 +339,16 @@ hardened security chahiye.
 
 | Panel | Wajah |
 |---|---|
-| **VestaCP** | Kabhi mashhoor tha, ab **unmaintained** — security risk. Iski jagah HestiaCP (iska maintained fork) lein. |
+| **VestaCP** | Kabhi mashhoor tha, ab **unmaintained** - security risk. Iski jagah HestiaCP (iska maintained fork) lein. |
 | **cPanel, Plesk, DirectAdmin, CyberPanel Enterprise** | Sirf paid / paid tier hi asal product hai |
 | **Sentora** | Ziyada tar chhod diya gaya |
-| **Froxlor** | Acha halka tool lekin beginner panel se zyada "config manager" — baad mein shamil ho sakta hai |
+| **Froxlor** | Acha halka tool hai lekin beginner panel se zyada "config manager" hai - baad mein shamil ho sakta hai |
 
 ---
 
 ## 🔁 Baad mein panel kaise badlein
 
-1. **Backup lein** — website files aur databases (panel → backup ya `mysqldump`)
+1. **Backup lein** - website files aur databases (panel → backup ya `mysqldump`)
 2. VPS WebHoster mein: **Remove Panel Cleanly** → poochega poora web stack
    bhi utaarna hai ya nahi
 3. Reboot (recommended)

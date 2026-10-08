@@ -10,9 +10,9 @@ beginners who just bought a VPS.
 2. **Beginner first.** Any text a human reads should stay simple and, when
    possible, available in English **and** Roman Urdu.
 3. **Official sources only.** Install commands must come from the panel's
-   official documentation — never from third-party blogs.
+   official documentation - never from third-party blogs.
 4. **No execution in CI.** This script changes servers. We only run static
-   checks (`bash -n`, `shellcheck`) — never the script itself.
+   checks (`bash -n`, `shellcheck`) - never the script itself.
 
 ## How to contribute
 
@@ -49,9 +49,9 @@ Panel installers change. If a command is outdated:
 ## Translations
 
 Roman Urdu translations live in `docs/ur/` and `README.ur.md`.
-Keep them side-by-side with the English versions — if you add a section in
+Keep them side-by-side with the English versions - if you add a section in
 English, add it in Roman Urdu too.
 
 ---
 
-Made by **Hayder** — MIT licensed.
+Made by **Hayder** - MIT licensed.

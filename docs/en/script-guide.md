@@ -1,8 +1,8 @@
-# ⚙️ Script Guide — Every Option of VPS WebHoster Explained
+# ⚙️ Script Guide - Every Option of VPS WebHoster Explained
 
 > **Language:** **English** | [اردو (Roman Urdu)](../ur/script-guide.md)
 >
-> Part of **VPS WebHoster** — [back to README](../../README.md)
+> Part of **VPS WebHoster** - [back to README](../../README.md)
 
 ---
 
@@ -38,9 +38,9 @@ The script first **detects your server** and then shows a menu:
 Prints everything the script knows about your machine:
 
 - OS name/family and the normalized version token it matches panels against
-- Architecture (`x86_64` or `aarch64`) — this decides which panels *can* run
+- Architecture (`x86_64` or `aarch64`) - this decides which panels *can* run
 - RAM (MB/GB), CPU cores, disk size, virtualization type, public IP
-- **A compatibility row for all 8 panels** — `[OK]` or `[NO]` with the exact
+- **A compatibility row for all 8 panels** - `[OK]` or `[NO]` with the exact
   reason (e.g. "needs at least 2GB RAM, you have 1GB")
 - Which panel(s), if any, are already installed
 
@@ -50,18 +50,18 @@ Use this first whenever something surprises you.
 
 The core of the project.
 
-1. **"What will you host?"** — WordPress/PHP · Node/Python/Go · Email + full
+1. **"What will you host?"** - WordPress/PHP · Node/Python/Go · Email + full
    hosting · Hosting business · Learning. Your answer feeds the
    recommendation engine.
 2. **The list appears ranked**:
-   - `RECOMMENDED (PanelName) — scored 87/100 — best for WordPress, fits your 4GB / amd64 / Debian 12`
+   - `RECOMMENDED (PanelName) - scored 87/100 - best for WordPress, fits your 4GB / amd64 / Debian 12`
    - then the other compatible panels
    - then incompatible ones, greyed with the reason
-3. **Details screen** for the panel you picked (features, pros, cons — in
+3. **Details screen** for the panel you picked (features, pros, cons - in
    English or Roman Urdu, your choice)
 4. **Confirmation** shows the exact official installer command before
    anything runs
-5. The **official interactive installer** starts — answer its prompts
+5. The **official interactive installer** starts - answer its prompts
 6. An **ALL DONE screen** shows the panel URL, port, where the credentials
    are and which firewall port to open
 
@@ -94,10 +94,10 @@ adds a *"Support on THIS server"* section using your live hardware.
    - deletes its directories (`/usr/local/hestia`, `/www/server/panel`…)
    - removes its system user if it created one
 5. Asks whether to **also purge the whole web stack**
-   (nginx/apache/PHP/database/mail) — say NO if you still need the sites
+   (nginx/apache/PHP/database/mail) - say NO if you still need the sites
 6. Prints a **removal report**: marker gone?, ports closed?, any panels left?
 
-> ⚠️ This is best-effort. Panels rewrite system configs deeply — for a
+> ⚠️ This is best-effort. Panels rewrite system configs deeply - for a
 > production server, a fresh OS reinstall is the only *guaranteed* clean
 > slate. That is also what CWP's own docs recommend.
 
@@ -107,14 +107,14 @@ Checklist (you choose what applies):
 
 | Item | What it does | Safe? |
 |---|---|---|
-| `pkgcache` | `apt clean` / `dnf clean` — downloaded package files | ✅ |
+| `pkgcache` | `apt clean` / `dnf clean` - downloaded package files | ✅ |
 | `autoremove` | removes orphaned no-longer-needed packages | ✅ |
 | `journal` | trims systemd journal logs to 200 MB | ✅ |
 | `oldlogs` | deletes `*.gz`, `*.1`, `*.2` rotated logs in `/var/log` | ✅ |
 | `tmp` | deletes `/tmp` files older than 7 days | ✅ (7-day grace) |
 | `trash` | empties root's trash | ✅ |
 | `kernels` | keeps only the 2 newest kernels (RHEL via package-cleanup; apt handles it with autoremove) | ✅ |
-| `docker` | `docker system prune -af` — dangling images & build cache, **volumes kept** | ⚠️ confirm |
+| `docker` | `docker system prune -af` - dangling images & build cache, **volumes kept** | ⚠️ confirm |
 | `snap` | removes disabled/old snap revisions | ✅ |
 
 Shows **disk used before and after** so you see exactly what you gained.
@@ -122,13 +122,13 @@ It **never** touches `/var/www`, website files or database dumps.
 
 ### 6️⃣ Security Hardening
 
-- **Firewall** — `ufw` on Debian/Ubuntu (deny incoming, allow SSH) or
+- **Firewall** - `ufw` on Debian/Ubuntu (deny incoming, allow SSH) or
   `firewalld` on AlmaLinux/Rocky/CentOS (allow ssh service)
-- **fail2ban** — installs it, writes a sane `jail.local` with an `sshd` jail
+- **fail2ban** - installs it, writes a sane `jail.local` with an `sshd` jail
   and enables the service
-- **Automatic updates** — `unattended-upgrades` on Debian/Ubuntu,
+- **Automatic updates** - `unattended-upgrades` on Debian/Ubuntu,
   `dnf-automatic` on Alma/Rocky, `yum-cron` on CentOS 7
-- **SSH tips** — key-based login, `PasswordAuthentication no`, non-root user,
+- **SSH tips** - key-based login, `PasswordAuthentication no`, non-root user,
   why changing the port is *not* real security
 - **All of the above** in one go
 
@@ -148,7 +148,7 @@ is required (`/var/run/reboot-required`, `needs-restarting`).
 ### 9️⃣ Beginner Guide
 
 The full beginner guide (control panel vs SSH, real-world examples, glossary)
-printed inside the terminal — in **English** or **Roman Urdu**.
+printed inside the terminal - in **English** or **Roman Urdu**.
 
 ### 🔟 Language & Settings
 
@@ -193,12 +193,12 @@ Valid panel ids: `hestiacp cloudpanel aapanel cyberpanel virtualmin ispconfig fa
 | Problem | Fix |
 |---|---|
 | "This action needs root" | prefix `sudo` |
-| "No terminal detected" | you piped the script — run it in a real terminal instead |
+| "No terminal detected" | you piped the script - run it in a real terminal instead |
 | Menus look plain/ugly | `apt install dialog` (the script offers to do it) |
-| Panel installer says "not a fresh OS" | most panels want a clean server — reinstall the OS or remove the existing stack |
+| Panel installer says "not a fresh OS" | most panels want a clean server - reinstall the OS or remove the existing stack |
 | Port won't open | open it in your **cloud provider's** firewall too |
-| ARM64 panel missing | only HestiaCP/CloudPanel/Virtualmin/ISPConfig officially support ARM64 — the script hides the rest |
-| Installer URL 404 | panel authors move files — check `P_DOCS` in the script for the official docs page |
+| ARM64 panel missing | only HestiaCP/CloudPanel/Virtualmin/ISPConfig officially support ARM64 - the script hides the rest |
+| Installer URL 404 | panel authors move files - check `P_DOCS` in the script for the official docs page |
 | Want to start over | Remove Panel → Junk Cleaner → reinstall |
 
 ---

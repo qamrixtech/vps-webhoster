@@ -1,8 +1,8 @@
-# 🖥️ The Panels — Every Free Control Panel, Explained
+# 🖥️ The Panels - Every Free Control Panel, Explained
 
 > **Language:** **English** | [اردو (Roman Urdu)](../ur/panels.md)
 >
-> Part of **VPS WebHoster** — [back to README](../../README.md)
+> Part of **VPS WebHoster** - [back to README](../../README.md)
 
 Every panel in this list is **free to use** or has a genuinely usable **free
 mode**. Paid panels (cPanel ≈ $15+/month, Plesk, DirectAdmin) are
@@ -17,7 +17,7 @@ deliberately **not** included.
 | **HestiaCP** | 100% free (GPL) | Debian 12/13, Ubuntu 22.04/24.04/26.04 | x86 + **ARM64** | 1 GB* | 8083 | PostgreSQL + custom DNS + full mail |
 | **CloudPanel** | Free CE | Debian 11/12/13, Ubuntu 22.04/24.04/26.04 | x86 + **ARM64** | 2 GB | 8443 | Lightest modern UI, Varnish, Node/Python |
 | **aaPanel** | Free (Pro paid) | Ubuntu, Debian, AlmaLinux, Rocky, CentOS 9+ | x86_64 | **512 MB** | dynamic | Lowest RAM, works on both families |
-| **CyberPanel** | Free (Pro paid) | Ubuntu 20.04/22.04/24.04, Alma/Rocky 8-9 | x86_64 | 1 GB | 8090 | OpenLiteSpeed — fastest PHP |
+| **CyberPanel** | Free (Pro paid) | Ubuntu 20.04/22.04/24.04, Alma/Rocky 8-9 | x86_64 | 1 GB | 8090 | OpenLiteSpeed - fastest PHP |
 | **Virtualmin GPL** | 100% free (GPL) | Alma/Rocky 8-10, Debian 11/12, Ubuntu 20.04-24.04 | x86 + **ARM64** | 1 GB | 10000 | Most mature, full mail/DNS/PostgreSQL |
 | **ISPConfig** | 100% free (GPL) | Debian 11/12/13, Ubuntu 22.04/24.04 | x86 + **ARM64** | 1 GB | 8080 | True multi-server / reseller |
 | **FastPanel** | Free license | Debian 9-12, Ubuntu 18.04-24.04, Alma/Rocky 8 | x86_64 | 1 GB | 8888 | Modern UI, free commercial license |
@@ -46,7 +46,7 @@ answer to *"What will you host?"*:
 
 ---
 
-## 1. HestiaCP — the most complete free cPanel alternative
+## 1. HestiaCP - the most complete free cPanel alternative
 
 - **Website/Docs:** <https://hestiacp.com/docs/introduction/getting-started>
 - **License:** 100% free, GPL. No paid edition.
@@ -63,7 +63,7 @@ answer to *"What will you host?"*:
 
 - Genuinely free with a huge, friendly community
 - **PostgreSQL support** and **custom DNS (BIND + DNSSEC)** out of the box
-- Full mail server (Exim + Dovecot) — you can host/sell email
+- Full mail server (Exim + Dovecot) - you can host/sell email
 - Works on **ARM64** as well as x86_64
 - Clean interface designed for beginners (file manager, web terminal, API)
 - One installer configures Nginx+Apache, MariaDB, FTP, fail2ban, backups
@@ -72,7 +72,7 @@ answer to *"What will you host?"*:
 
 - Full stack (mail + DNS + ClamAV + SpamAssassin) wants ~4 GB RAM
 - Nginx+Apache combo uses more RAM than pure Nginx
-- Debian/Ubuntu only — **no AlmaLinux/Rocky**
+- Debian/Ubuntu only - **no AlmaLinux/Rocky**
 - No official uninstaller (third-party scripts exist; our script does a
   careful cleanup)
 
@@ -81,7 +81,7 @@ PostgreSQL or their own nameservers.
 
 ---
 
-## 2. CloudPanel — best lightweight panel for PHP / Node / Python
+## 2. CloudPanel - best lightweight panel for PHP / Node / Python
 
 - **Website/Docs:** <https://www.cloudpanel.io/docs/>
 - **License:** Free Community Edition (source-available); Enterprise is paid
@@ -93,20 +93,20 @@ PostgreSQL or their own nameservers.
   ```
 
 - **Uninstall:** `apt remove --purge cloudpanel` (plus cleanup of MOTD/host
-  changes — our script handles it)
+  changes - our script handles it)
 
 **✅ Pros**
 
-- Very low RAM/CPU footprint — the interface is extremely fast
+- Very low RAM/CPU footprint - the interface is extremely fast
 - **Varnish cache built in** (their docs claim up to 250× faster pages)
 - **MariaDB**, Redis, free SSL, 2FA, SFTP, monitoring
-- **Node.js, Python and Go** projects natively supported — rare for panels
+- **Node.js, Python and Go** projects natively supported - rare for panels
 - **ARM64** supported
 - Modern, no-nonsense developer UI
 
 **❌ Cons**
 
-- **No mail server** — use an external SMTP (Mailgun, SES, SendGrid)
+- **No mail server** - use an external SMTP (Mailgun, SES, SendGrid)
 - 2 GB RAM minimum
 - **No PostgreSQL** (MariaDB/MySQL only)
 - Community Edition is source-available, not OSI-approved open source
@@ -117,7 +117,7 @@ and simplicity and don't need email hosting.
 
 ---
 
-## 3. aaPanel — the lowest-RAM, widest-distro panel
+## 3. aaPanel - the lowest-RAM, widest-distro panel
 
 - **Website/Docs:** <https://www.aapanel.com/docs/guide/quickstart.html>
 - **License:** Free; advanced features are paid "Pro" plugins
@@ -140,7 +140,7 @@ and simplicity and don't need email hosting.
 **✅ Pros**
 
 - **512 MB RAM minimum**; the panel itself uses only ~60 MB
-- Works on **Ubuntu, Debian, AlmaLinux, Rocky AND CentOS** — the widest OS
+- Works on **Ubuntu, Debian, AlmaLinux, Rocky AND CentOS** - the widest OS
   support in this list
 - Free **WAF** (web application firewall) included
 - One-click LNMP/LAMP, app store, WP Toolkit, Docker manager, Node projects
@@ -149,7 +149,7 @@ and simplicity and don't need email hosting.
 **❌ Cons**
 
 - Most advanced features are paid Pro plugins
-- ARM64 is **unofficial/partial** — use an x86_64 VPS
+- ARM64 is **unofficial/partial** - use an x86_64 VPS
 - Interface shows promos for paid modules
 - Smaller English-speaking community than Hestia/CyberPanel
 
@@ -157,7 +157,7 @@ and simplicity and don't need email hosting.
 
 ---
 
-## 4. CyberPanel — the speed panel (OpenLiteSpeed)
+## 4. CyberPanel - the speed panel (OpenLiteSpeed)
 
 - **Website/Docs:** <https://cyberpanel.net/KnowledgeBase/home/install-cyberpanel/>
 - **License:** Free edition (OpenLiteSpeed, unlimited domains) + paid
@@ -181,18 +181,18 @@ and simplicity and don't need email hosting.
 
 **❌ Cons**
 
-- **x86_64 only** — no ARM64 (their issue tracker still has the request open)
+- **x86_64 only** - no ARM64 (their issue tracker still has the request open)
 - **No PostgreSQL** (MariaDB only)
 - **No Debian** (Ubuntu + Alma/Rocky only)
 - No official uninstaller
-- The installer asks several questions (LiteSpeed version, add-ons) — our
+- The installer asks several questions (LiteSpeed version, add-ons) - our
   script hands you straight into it
 
 **Best for:** high-traffic WordPress/PHP sites where raw speed matters most.
 
 ---
 
-## 5. Virtualmin GPL — the most mature, most complete free panel
+## 5. Virtualmin GPL - the most mature, most complete free panel
 
 - **Website/Docs:** <https://www.virtualmin.com/download/>
 - **License:** 100% free, GPL. No paid edition exists.
@@ -208,7 +208,7 @@ and simplicity and don't need email hosting.
 **✅ Pros**
 
 - 20+ years of development; the "old master" of free panels
-- **PostgreSQL + BIND DNS + mail + FTP + quotas** — full classic hosting
+- **PostgreSQL + BIND DNS + mail + FTP + quotas** - full classic hosting
 - Supports **RHEL family AND Debian family**, including **ARM64**
 - Extremely powerful CLI (`virtualmin` command) for automation
 - 100+ Webmin modules extend everything
@@ -224,7 +224,7 @@ PostgreSQL hosting, automation lovers.
 
 ---
 
-## 6. ISPConfig — the professional multi-server panel
+## 6. ISPConfig - the professional multi-server panel
 
 - **Website/Docs:** <https://www.ispconfig.org/documentation/>
 - **License:** 100% free, GPL
@@ -239,7 +239,7 @@ PostgreSQL hosting, automation lovers.
 **✅ Pros**
 
 - 100% free with no paid tiers
-- **True multi-server** — web, DNS, mail and DB can run on separate machines
+- **True multi-server** - web, DNS, mail and DB can run on separate machines
   controlled from one interface
 - MySQL **and** PostgreSQL, BIND DNS, mail, resellers, quotas
 - **ARM64 supported** by the official auto-installer
@@ -256,7 +256,7 @@ ISP-style setups.
 
 ---
 
-## 7. FastPanel — modern UI with a genuinely free license
+## 7. FastPanel - modern UI with a genuinely free license
 
 - **Website/Docs:** <https://kb.fastpanel.direct/quick_start/how-to-install-fastpanel/>
 - **License:** Free lifetime license for personal **and** commercial use
@@ -280,7 +280,7 @@ ISP-style setups.
 
 - Free license even for agencies selling hosting
 - Very modern, clean, fast interface; HTTP/3 support
-- **Official uninstall command** — rare among panels
+- **Official uninstall command** - rare among panels
 - Debian **and** AlmaLinux/Rocky
 - Choose your MySQL version during install
 
@@ -296,7 +296,7 @@ without paying.
 
 ---
 
-## 8. CWP (Control Web Panel) — enterprise security for AlmaLinux
+## 8. CWP (Control Web Panel) - enterprise security for AlmaLinux
 
 - **Website/Docs:** <https://control-webpanel.com/installation-instructions>
 - **License:** Free core + CWPpro paid
@@ -313,7 +313,7 @@ without paying.
 
   *(EL8 / AlmaLinux 8 uses `cwp-el8-latest`, CentOS 7 uses `cwp-el7-latest`)*
 
-- **Uninstall:** **none** — their official statement: *"CWP does not include
+- **Uninstall:** **none** - their official statement: *"CWP does not include
   an uninstaller. To remove the software… a complete reinstallation of the
   server's OS is required."* Our script does a careful best-effort cleanup
   instead, but on a production server a fresh OS really is the safe answer.
@@ -341,10 +341,10 @@ security.
 
 | Panel | Why excluded |
 |---|---|
-| **VestaCP** | Once popular, now **unmaintained** — security risk. Use HestiaCP (its maintained fork) instead. |
+| **VestaCP** | Once popular, now **unmaintained** - security risk. Use HestiaCP (its maintained fork) instead. |
 | **cPanel, Plesk, DirectAdmin, CyberPanel Enterprise** | Paid only / paid tiers are the product |
 | **Sentora** | Largely abandoned |
-| **Froxlor** | Great lightweight tool but more a "config manager" than a beginner panel — may be added later |
+| **Froxlor** | Great lightweight tool but more a "config manager" than a beginner panel - may be added later |
 
 ---
 

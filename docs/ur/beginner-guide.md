@@ -1,13 +1,13 @@
-# 📘 Beguider Guide — Control Panel, SSH aur Aapka VPS
+# 📘 Beginner Guide - Control Panel, SSH aur Aapka VPS
 
 > **Zaban:** [English](../en/beginner-guide.md) | **اردو (Roman Urdu)**
 >
-> **VPS WebHoster** ka hissa — [README par wapsi](../../README.ur.md)
+> **VPS WebHoster** ka hissa - [README par wapsi](../../README.ur.md)
 
-Ye guide un logon ke liye hai jinhone **kabhi bhi** server nahi chalaya.
-Har technical lafz ka simple urdu-wazahat ke saath matlab bataya gaya hai.
-Ek baar parh lijiye — aap se zyada log jo "hosting account" rakhte hain unhe
-bhi itna nahi pata hota.
+Ye guide un logon ke liye hai jinhone **kabhi** server nahi chalaya.
+Har technical lafz ka sada urdu mein wazahat ke saath matlab bataya gaya hai.
+Ek baar parh lijiye - jinke paas "hosting account" hai unko bhi aksar itna
+nahi pata hota.
 
 ---
 
@@ -16,7 +16,7 @@ bhi itna nahi pata hota.
 1. [Server / VPS kya hai?](#1-server--vps-kya-hai)
 2. [Website control panel kya hai?](#2-website-control-panel-kya-hai)
 3. [SSH kya hai?](#3-ssh-kya-hai)
-4. [Control panel vs SSH — asal farq](#4-control-panel-vs-ssh--asal-farq)
+4. [Control panel vs SSH - asal farq](#4-control-panel-vs-ssh--asal-farq)
 5. [Asal duniya ki misaalen](#5-asal-duniya-ki-misaalen)
 6. [SSH se kaise connect karein (step by step)](#6-ssh-se-kaise-connect-karein-step-by-step)
 7. [Aapko kya use karna chahiye?](#7-aapko-kya-use-karna-chahiye)
@@ -28,14 +28,14 @@ bhi itna nahi pata hota.
 ## 1. Server / VPS kya hai?
 
 **Server** ek aisa computer hai jo datacenter mein 24 ghante chalta rehta hai
-aur aapki website ko visitors ko dikhata hai.
+aur aapki website visitors ko dikhata hai.
 
-**VPS (Virtual Private Server)** bari physical machine ka ek chhota tukda hai,
+**VPS (Virtual Private Server)** ek badi physical machine ka chhota tukda hai,
 jis ka apna RAM, CPU, disk aur IP address hota hai. Aap use mahana kiraye par
-lete hain — Hetzner, Vultr, DigitalOcean, Contabo waghera se.
+lete hain - Hetzner, Vultr, DigitalOcean, Contabo waghera se.
 
 **Asal misaal:** VPS mall mein ek chhoti si dukan kiraye par lena jaisa hai.
-Mall (datacenter) bijli aur security deta hai; dukan (VPS) aapki hai — andar
+Mall (datacenter) bijli aur security deta hai; dukan (VPS) aapki hai - andar
 kya rakhna hai aap tay karte hain.
 
 ---
@@ -45,20 +45,20 @@ kya rakhna hai aap tay karte hain.
 **Website control panel** ek **web page** hai (browser mein khulta hai) jo
 server ke mushkil commands ko **buttons aur forms** mein badal deta hai.
 
-Tees commands likhne ke bajaye aap click karte hain:
+30 commands likhne ke bajaye aap sirf click karte hain:
 
 ```
 Websites → Add Website → domain.com → PHP version choose → WordPress Install
 ```
 
 Peeche us waqt Nginx ki config file edit hoti hai, database banta hai, SSL
-lagta hai, cron set hota hai — sab kuch apne aap.
+lagta hai, cron set hota hai - sab kuch apne aap.
 
 **Asal misaal:** control panel aapke **TV ka remote control** hai. Aap buttons
-daba kar channel aur awaz badalte hain — TV ke andar taaron ko chhue bagair.
+daba kar channel aur awaaz badalte hain - TV ke andar taaron ko chhue bagair.
 
 Ek aur: ye **hotel ki reception desk** hai. Aap kehte hain "mujhe do raat ke
-liye kamra chahiye" aur wo sab sambhal lete hain — kitchen, laundry aur
+liye kamra chahiye" aur wo sab sambhal leta hai - kitchen, laundry aur
 accounting aap nahi dekhte. Server ka andaruni hissa bhi aise hi chhupi rehta
 hai.
 
@@ -77,7 +77,7 @@ hai.
 ## 3. SSH kya hai?
 
 **SSH (Secure Shell)** aapke server ke **terminal tak encrypted connection**
-hai — jahan aap *commands type* karte hain.
+hai - jahan aap *commands type* karte hain.
 
 SSH mein aapke paas kala terminal hota hai aur mukammal control:
 
@@ -89,21 +89,21 @@ htop                    # RAM/CPU live dekho
 ```
 
 **Asal misaal:** SSH **aapki apni chabi** hai server ke darwaze ki. Aap andar
-ghus kar khud sab kuch chhoo sakte hain — taqatwar, lekin kuch gir bhi sakte
+ghus kar khud sab kuch chhoo sakte hain - taqatwar, lekin kuch gir bhi sakte
 hain. Control panel hotel ka desk hai: aap request karte hain, wo karte hain.
 
-**"Secure" kyun?** Aapke computer aur server ke darmian har cheez encrypted
-hoti hai — password, files, commands. Purana FTP encrypted nahi tha, isi liye
+**"Secure" kyun?** Aapke computer aur server ke darmiyan har cheez encrypted
+hoti hai - password, files, commands. Purana FTP encrypted nahi tha, isi liye
 SSH ne usay replace kar diya.
 
 ---
 
-## 4. Control panel vs SSH — asal farq
+## 4. Control panel vs SSH - asal farq
 
 | Pehlu | 🖥️ Control Panel | ⌨️ SSH |
 |---|---|---|
-| Dikhta kaisa hai | Web page, buttons, forms | Kala terminal, typed commands |
-| Seekhna | Aasan — ghanton mein | Thoda mushkil — hafton mein |
+| Dikhta kaisa hai | Web page, buttons, forms | Kala terminal, type ki gayi commands |
+| Seekhna | Aasan - ghanton mein | Thoda mushkil - hafton mein |
 | Naye logon ke liye speed | Tez (point & click) | Pehle ahista |
 | Experts ke liye speed | Dheema (menus se) | Bohat tez (scripts se) |
 | Kya chhoo sakte ho | Sirf jo panel de | **Poora server** |
@@ -112,30 +112,30 @@ SSH ne usay replace kar diya.
 | Kis ke liye | Blogger, dukaandar, clients | Developer, sysadmin |
 | Bina browser ke chale? | Nahi | Haan (sirf terminal) |
 
-**Ye dushman nahi — teammates hain.**
+**Ye dushman nahi - teammates hain.**
 Zyadatar log panel se roz ka kaam karte hain aur SSH un 5% kaamon ke liye
-istemal karte hain jo panel nahi kar sakta (khaas tuning, debugging, ek-time
+istemal karte hain jo panel nahi kar sakta (khaas tuning, debugging, ek dafa ki
 scripts).
 
 ---
 
 ## 5. Asal duniya ki misaalen
 
-### Misaal A — photographer (panel wala)
+### Misaal A - photographer (panel wala)
 
-Amaan tasveer lete hain aur `amaanphotos.com` chahiye portfolio gallery ke
-saath. Unhe terminal ka pata nahi. Wo:
+Amaan tasveerein lete hain aur unhe `amaanphotos.com` chahiye portfolio
+gallery ke saath. Unko terminal ka pata nahi. Wo:
 
 1. VPS khareed kar browser mein **control panel** mein login karte hain
 2. **Add Website** click karte hain, domain daalte hain
 3. **WordPress Install** click karte hain, theme choose karte hain
 4. **SSL → Let's Encrypt → Save**
 
-10 minute mein website live — ek bhi command type kiye bagair.
+10 minute mein website live - ek bhi command type kiye bagair.
 **SSH hota to:** `/etc/nginx/sites-available/…` edit karna, PHP install
 karna, MySQL database khud banana, certbot set karna… 40+ minute ka tension.
 
-### Misaal B — developer (SSH wala)
+### Misaal B - developer (SSH wala)
 
 Bilal har raat app deploy karte hain. Ek script likhte hain:
 
@@ -146,22 +146,22 @@ npm ci --omit=dev
 pm2 restart app
 ```
 
-…aur SSH se `./deploy.sh` chala dete hain — 4 second. Unke liye panel ke
+…aur SSH se `./deploy.sh` chala dete hain - 4 second. Unke liye panel ke
 click-click *dheeme* hain. Phir bhi kabhi logs ya SSL expiry dekhne panel
 khol lete hain.
 
-### Misaal C — hosting company (dono)
+### Misaal C - hosting company (dono)
 
 Sara 50 clients ki hosting bechti hain. Wo **reseller panel** (HestiaCP ya
 ISPConfig) use karti hain taake har client ka apna limited login ho, aur
 server-level maintenance SSH se karti hain. Panel unka shop-front hai; SSH
 unka workshop.
 
-### Misaal D — sirf 1GB ka VPS (is script ki wajah)
+### Misaal D - sirf 1GB ka VPS (is script ki wajah)
 
 Aapne sasta 1GB VPS liya. Bhaari panel lagaya to server hamesha swap karta
 rahega aur slow ho jayega. **VPS WebHoster** aapka RAM/CPU/OS naap kar
-*sahi* panel top par rakhta hai — 1GB ke liye aaPanel (512MB se chalta hai),
+*sahi* panel top par rakhta hai - 1GB ke liye aaPanel (512MB se chalta hai),
 4GB ke liye HestiaCP (mail + DNS ke saath).
 
 ---
@@ -182,7 +182,7 @@ Password      : (ya SSH key file)
    Terminal* + `ssh`)
 2. Host Name: `203.0.113.10`, Port: `22` → **Open** dabayein
 3. Fingerprint accept karein → `root` likhein → password daalein
-   *(password type karte waqt screen par nahi dikhta — ye normal hai)*
+   *(password type karte waqt screen par nahi dikhta - ye normal hai)*
 
 ```text
 login as: root
@@ -216,9 +216,9 @@ sudo bash vps-webhoster.sh
 
 ### Password vs key (bohat zaroori)
 
-- **Password** — jaise dukaan ki chabi darwaze ke neeche chhod dein. Bots
-  poori internet par har minute passwords aazmate hain.
-- **SSH key** — 2 hisson wala keypair; private hissa network par kabhi travel
+- **Password** - jaise dukaan ki chabi darwaze ke neeche chhod dein. Bots
+  pore internet par har minute passwords aazmate hain.
+- **SSH key** - 2 hisson wala keypair; private hissa network par kabhi travel
   nahi karta, is liye brute-force ho hi nahi sakta.
 
 Apne computer par (server par nahi) keys banayein:
@@ -243,12 +243,12 @@ Sirf ek sawaal pooch lein: **"Mujhe commands type karna pasand hai?"**
 | Blogger / freelancer / dukaandar hain | **Control panel** (script khud recommend karta hai) |
 | Developer hain jo code deploy karte hain | **SSH** (panel sirf database/SSL ke liye) |
 | Hosting business chalate hain | **Reseller wala panel** (HestiaCP, ISPConfig) |
-| 512MB–1GB VPS par hain | **Halka panel** (aaPanel) — script yehi batayega |
+| 512MB–1GB VPS par hain | **Halka panel** (aaPanel) - script yehi batayega |
 | Linux seriously seekhna chahte hain | Pehle SSH, baad mein panel |
 
 **Sidhi baat:** control panel aapki pehli website aaj hi online le aata hai;
 SSH zindagi bhar ke liye aapko confident banata hai. Abhi panel seekhein, har
-hafta ek SSH command seekhein — mahine bhar mein na darr lagega panel se na
+hafta ek SSH command seekhein - mahine bhar mein na darr lagega panel se na
 terminal se.
 
 ---
@@ -261,16 +261,16 @@ terminal se.
 | **SSH** | Server tak encrypted terminal connection |
 | **Control panel** | Browser wala server remote control |
 | **Nginx / Apache** | Web server jo visitors ko pages bhejta hai |
-| **PHP / Node.js / Python** | Programming languages jin mein sites banti hain |
-| **MySQL / MariaDB** | Database jahan WordPress posts & users rakhta hai |
+| **PHP / Node.js / Python** | Programming languages jin mein websites banti hain |
+| **MySQL / MariaDB** | Database jahan WordPress apni posts aur users rakhta hai |
 | **PostgreSQL** | Zyada advanced SQL database (Hestia/ISPConfig/Virtualmin) |
 | **DNS** | Phone book jo `example.com` ko aapke IP se jorta hai |
 | **SSL / HTTPS** | Green lock; Let's Encrypt se free |
-| **Varnish / Redis / PageSpeed** | Caching — site foran khulti hai |
+| **Varnish / Redis / PageSpeed** | Caching - site foran khulti hai |
 | **Firewall** | Security gate jo traffic ko andar aane deti ya rokti hai |
-| **fail2ban** | Jo IP baar baar password guess kare usay auto-ban |
+| **fail2ban** | Jo IP baar baar password guess kare, use khud ban kar deta hai |
 | **Domain** | Website ka asaan naam |
-| **cPanel / Plesk** | Mashhoor **paid** panels — jaan bujh kar is script mein nahi |
+| **cPanel / Plesk** | Mashhoor **paid** panels - jaan bujh kar is script mein nahi |
 | **Freemium** | Free core + paid extras (aaPanel Pro, CyberPanel Pro, CWP) |
 
 ---
@@ -278,16 +278,27 @@ terminal se.
 ## 9. VPS lene ke baad pehle 9 kaam
 
 1. **SSH se connect karein** (section 6)
-2. **System update karein** — `apt update && apt upgrade -y` ya `dnf update -y`
-3. **Ye script chalayein** — `sudo bash vps-webhoster.sh`
+2. **System update karein** - `apt update && apt upgrade -y` ya `dnf update -y`
+3. **Ye script chalayein** - `sudo bash vps-webhoster.sh`
 4. **Recommended panel install karein** menu se
 5. **Panel ka port kholein** (8083/8443/8090/…) apne provider ke
-   firewall/security group mein — cloud firewall traffic ko aapke server tak
+   firewall/security group mein - cloud firewall traffic ko aapke server tak
    pahunchne se *pehle* hi rok deta hai
 6. **Har default password foran badlein**
 7. **Firewall + fail2ban + auto-update chalu karein** (Security menu)
-8. **Backup schedule lagayein** — backup ke bina server asal mein aapka nahi
+8. **Backup schedule lagayein** - backup ke bina server asal mein aapka nahi
 9. **Pehli website panel ke andar add karein** 🎉
+
+---
+
+## 📚 Mazeed beginner guides
+
+| Guide | Ismein kya seekhenge |
+|---|---|
+| [SSH kya hai?](./what-is-ssh.md) | Gehri baat: keys vs passwords, PuTTY, tunnels, har error ka hal |
+| [WAF kya hai?](./what-is-waf.md) | Web Application Firewall, SQLi/XSS, har panel par kaise on karein |
+| [Windows user ke liye Linux](./linux-for-windows-users.md) | Distribution kya hai, Debian vs RHEL, Windows↔Linux tarjuma |
+| [Linux commands ki list](./linux-commands.md) | 100+ commands - taarif, misaal aur kab kaam aati hain |
 
 ---
 

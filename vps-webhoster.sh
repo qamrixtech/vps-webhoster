@@ -141,7 +141,7 @@ BANNER
 
 print_usage() {
     cat <<EOF
-${C_BOLD}${SCRIPT_NAME} v${SCRIPT_VERSION} — Made by ${SCRIPT_AUTHOR}${C_RESET}
+${C_BOLD}${SCRIPT_NAME} v${SCRIPT_VERSION} - Made by ${SCRIPT_AUTHOR}${C_RESET}
 
 Usage:
   sudo bash $0                      Launch the interactive TUI menu
@@ -186,7 +186,7 @@ save_settings() {
 # ----------------------------------------------------------------------------
 detect_system() {
     if [[ ! -r /etc/os-release ]]; then
-        err "Cannot read /etc/os-release — unsupported system."
+        err "Cannot read /etc/os-release - unsupported system."
         exit 1
     fi
     # shellcheck disable=SC1091
@@ -244,7 +244,7 @@ pkg_manager() {
 }
 
 # ----------------------------------------------------------------------------
-# Panel data (verified against official docs — v1.0.0)
+# Panel data (verified against official docs - v1.0.0)
 #   P_OS      : supported "id:version" tokens (space separated)
 #   P_ARCH    : supported architectures
 #   P_MINRAM  : minimum RAM in MB
@@ -499,7 +499,7 @@ recommend() {
 
     if [[ -n "$best_id" ]]; then
         REC_ID="$best_id"
-        REC_REASON="scored ${best}/100 — ${best_why}, fits ${OS_PRETTY} / ${ARCH_OK} / ${RAM_GB}GB / ${CORES} core(s)"
+        REC_REASON="scored ${best}/100 - ${best_why}, fits ${OS_PRETTY} / ${ARCH_OK} / ${RAM_GB}GB / ${CORES} core(s)"
         log "Recommendation for use-case '$use_case': $REC_ID ($REC_REASON)"
     fi
 }
@@ -695,7 +695,7 @@ show_system_info() {
                 mark="NO "
                 reason="$COMPAT_REASON"
             fi
-            printf ' [%s] %-16s %s — %s\n' "$mark" "${P_NAME[$id]}" "$reason" "${P_MINRAM[$id]}MB min"
+            printf ' [%s] %-16s %s - %s\n' "$mark" "${P_NAME[$id]}" "$reason" "${P_MINRAM[$id]}MB min"
         done
         printf '\n Installed panel(s): %s\n' \
             "${FOUND_PANELS[*]:-none detected}"
@@ -731,14 +731,14 @@ firewall + fail2ban | web terminal | REST API
 PROS:
  + Truly 100% free, no "pro" traps, huge community
  + PostgreSQL support AND custom DNS out of the box
- + Full mail server — you can sell email hosting
+ + Full mail server - you can sell email hosting
  + Works on ARM64 servers (Hetzner, AWS Graviton, Oracle)
  + Clean beginner-friendly web interface
 
 CONS:
  - Heavy: mail+DNS+antivirus need ~4GB RAM for full stack
  - No official uninstaller (use this script's Remove option)
- - Only Debian/Ubuntu — no AlmaLinux/Rocky
+ - Only Debian/Ubuntu - no AlmaLinux/Rocky
  - Default stack is Nginx+Apache combo (uses more RAM)
 
 BEST FOR: hosting businesses, people who need email + PostgreSQL +
@@ -755,7 +755,7 @@ YE KYA HAI:
 Ye free cPanel ka sab se mukammal alternative hai. Ek installer se
 Nginx+Apache, MariaDB/PostgreSQL, asli mail server (Exim+Dovecot),
 BIND DNS server (apne custom nameservers), FTP, reseller accounts,
-backups aur file manager — sab kuch mil jata hai.
+backups aur file manager - sab kuch mil jata hai.
 
 FEATURES: websites | email | DNS zones + DNSSEC | PostgreSQL &
 MariaDB | FTP | reseller packages | Let's Encrypt SSL | backups |
@@ -764,18 +764,18 @@ firewall + fail2ban | web terminal | REST API
 FAWADA (PROS):
  + Bilkul 100% free, koi "pro" trap nahi, bara community
  + PostgreSQL aur custom DNS dono shuru se maujood
- + Pura mail server — aap email hosting bech sakte hain
+ + Pura mail server - aap email hosting bech sakte hain
  + ARM64 servers par bhi chalta hai (Hetzner, AWS Graviton)
  + Saaf-suthra beginner-friendly interface
 
 NUKSAAN (CONS):
- + Heavy: mail+DNS+antivirus ke liye ~4GB RAM chahiye
+ - Heavy: mail+DNS+antivirus ke liye ~4GB RAM chahiye
  - Official uninstaller nahi (is script ka Remove option use karein)
- - Sirf Debian/Ubuntu — AlmaLinux/Rocky par nahi
- - Nginx+Apache combo hai thoda zyada RAM khata hai
+ - Sirf Debian/Ubuntu - AlmaLinux/Rocky par nahi
+ - Nginx+Apache combo thoda zyada RAM khata hai
 
-KIS KE LIYE: hosting business walon ke liye, jinhe email + PostgreSQL
-+ custom DNS chahiye, resellers, aur naye log jinhe "sab kuch" chahiye.
+KIS KE LIYE: hosting business walon ke liye jinhein email, PostgreSQL
+aur custom DNS chahiye, resellers, aur naye log jinhein sab kuch chahiye.
 EOF
         ;;
         en:cloudpanel) cat >"$tmp" <<'EOF'
@@ -794,7 +794,7 @@ Varnish cache | Redis | free SSL | file manager | FTP/SFTP | CLI |
 monitoring | 2FA | no mail server (use a mail service instead)
 
 PROS:
- + Lightest modern interface — very low RAM/CPU overhead
+ + Lightest modern interface - very low RAM/CPU overhead
  + Varnish built in = extremely fast WordPress/PHP pages
  + Node.js + Python + Go native support (rare for panels!)
  + Works on ARM64 VPS
@@ -802,7 +802,7 @@ PROS:
 
 CONS:
  - No mail server (need external SMTP like Mailgun/SendGrid)
- - 2GB RAM minimum — too heavy for 512MB/1GB servers
+ - 2GB RAM minimum - too heavy for 512MB/1GB servers
  - No PostgreSQL (MariaDB/MySQL only)
  - Community Edition is source-available, not OSI-open-source
 
@@ -823,10 +823,10 @@ Redis. PHP, Node.js, Python aur Go sites ek saath chalti hain.
 
 FEATURES: PHP sites | Node.js apps | Python apps | Go | MariaDB |
 Varnish cache | Redis | free SSL | file manager | FTP/SFTP | CLI |
-monitoring | 2FA | mail server nahi (bahar ka mail service use karein)
+monitoring | 2FA | mail server nahi (kisi bahar ki mail service use karein)
 
 FAWADA (PROS):
- + Sab se halka modern interface — RAM/CPU bahut kam khata
+ + Sab se halka modern interface - RAM/CPU bahut kam khata
  + Varnish built-in = WordPress/PHP pages bahut tez
  + Node.js + Python + Go ka native support (panels mein rare!)
  + ARM64 VPS par bhi chalta hai
@@ -834,7 +834,7 @@ FAWADA (PROS):
 
 NUKSAAN (CONS):
  - Mail server nahi (bahar ka SMTP chahiye jaise Mailgun/SendGrid)
- - 2GB RAM minimum — 512MB/1GB servers par theek nahi
+ - 2GB RAM minimum - 512MB/1GB servers par theek nahi
  - PostgreSQL nahi (sirf MariaDB/MySQL)
  - Community Edition source-available hai, pura open-source nahi
 
@@ -849,7 +849,7 @@ OS      : Ubuntu 22.04+, Debian 11+, AlmaLinux/Rocky 8-10, CentOS 9+
 Arch    : x86_64                    RAM  : 512MB min / 1GB recommended
 
 WHAT IT IS:
-The lowest-RAM full-featured panel — the pure panel itself uses only
+The lowest-RAM full-featured panel - the pure panel itself uses only
 ~60MB RAM. Works on BOTH Debian-family and RHEL-family distros, so
 it fits almost any VPS. One-click LNMP/LAMP installer, free WAF,
 app store, WP Toolkit.
@@ -859,7 +859,7 @@ manager | WAF (free) | app store | WP Toolkit | cron | monitoring |
 Docker manager | Node.js projects | sub-accounts
 
 PROS:
- + Only 512MB RAM needed — great for tiny/cheap VPS
+ + Only 512MB RAM needed - great for tiny/cheap VPS
  + Runs on Ubuntu, Debian, AlmaLinux AND Rocky
  + Free WAF (web firewall) included
  + Huge one-click app store, very beginner friendly
@@ -867,7 +867,7 @@ PROS:
 
 CONS:
  - Advanced features are paid "Pro" plugins (aapanel.com/pricing)
- - ARM64 support is unofficial/partial — use x86_64 VPS
+ - ARM64 support is unofficial/partial - use x86_64 VPS
  - Interface has ads/promos for paid modules
  - Smaller English community than Hestia/CyberPanel
 
@@ -882,9 +882,9 @@ OS      : Ubuntu 22.04+, Debian 11+, AlmaLinux/Rocky 8-10, CentOS 9+
 Arch    : x86_64                    RAM  : 512MB min / 1GB recommended
 
 YE KYA HAI:
-Sab se kam RAM wala full-featured panel — khud panel sirf ~60MB RAM
-use karta hai. Debian-family DONO aur RHEL-family distros par chalta
-hai, yaani har VPS par fit ho jata hai. One-click LNMP/LAMP, free
+Sab se kam RAM wala full-featured panel - khud panel sirf ~60MB RAM
+use karta hai. Debian-family aur RHEL-family dono tarah ke distros
+par chalta hai, yaani har VPS par fit ho jata hai. One-click LNMP/LAMP, free
 WAF, app store, WP Toolkit.
 
 FEATURES: websites | MySQL/MariaDB | PostgreSQL | FTP | mail | file
@@ -892,20 +892,20 @@ manager | WAF (free) | app store | WP Toolkit | cron | monitoring |
 Docker manager | Node.js projects | sub-accounts
 
 FAWADA (PROS):
- + Sirf 512MB RAM chahiye — chhote/saste VPS ke liye best
- + Ubuntu, Debian, AlmaLinux aur Rocky — sab par chalta hai
+ + Sirf 512MB RAM chahiye - chhote/saste VPS ke liye best
+ + Ubuntu, Debian, AlmaLinux aur Rocky - sab par chalta hai
  + Free WAF (web firewall) milta hai
  + Bara one-click app store, beginner ke liye asaan
  + Full panels mein sab se kam resource use
 
 NUKSAAN (CONS):
  - Advanced cheezein paid "Pro" plugins hain (aapanel.com/pricing)
- - ARM64 support unofficial/partial — x86_64 VPS lein
+ - ARM64 support unofficial/partial - x86_64 VPS lein
  - Interface par paid modules ki promotion dikhti hai
- - Hestia/CyberPanel jitna bara English community nahi
+ - English community Hestia/CyberPanel jitni bari nahi
 
 KIS KE LIYE: 1-2GB chhote VPS, AlmaLinux/Rocky users, aur naye log
-jo kam RAM mein asaania se start karna chahte hain.
+jo kam RAM mein asaani se start karna chahte hain.
 EOF
         ;;
         en:cyberpanel) cat >"$tmp" <<'EOF'
@@ -915,7 +915,7 @@ OS      : Ubuntu 20.04/22.04/24.04, AlmaLinux/Rocky 8-9
 Arch    : x86_64 only              RAM  : 1GB min / 2GB recommended
 
 WHAT IT IS:
-The speed-focused free panel built on OpenLiteSpeed — the open
+The speed-focused free panel built on OpenLiteSpeed - the open
 edition of LiteSpeed web server, famous for the fastest PHP/WordPress
 serving. Includes PowerDNS (custom nameservers), Redis, mail, FTP.
 
@@ -926,12 +926,12 @@ Docker manager | backups | resellers | CLI
 PROS:
  + Fastest PHP/WordPress performance of any free panel
  + OpenLiteSpeed = HTTP/3, low memory, .htaccess support
- + PowerDNS included — easy custom nameservers
+ + PowerDNS included - easy custom nameservers
  + Unlimited domains on the free edition
  + Redis built in for object caching
 
 CONS:
- - x86_64 only — does NOT work on ARM64 servers
+ - x86_64 only - does NOT work on ARM64 servers
  - No PostgreSQL (MariaDB only)
  - No Debian support (Ubuntu + Alma/Rocky only)
  - Official uninstaller missing (use this script's Remove option)
@@ -946,7 +946,7 @@ OS      : Ubuntu 20.04/22.04/24.04, AlmaLinux/Rocky 8-9
 Arch    : x86_64 only              RAM  : 1GB min / 2GB recommended
 
 YE KYA HAI:
-Speed par bana free panel, OpenLiteSpeed ke upar — PHP/WordPress ki
+Speed par bana free panel, OpenLiteSpeed ke upar - PHP/WordPress ki
 sab se tez serving ke liye mashhoor. PowerDNS (custom nameservers),
 Redis, mail aur FTP bhi shamil hai.
 
@@ -957,12 +957,12 @@ Docker manager | backups | resellers | CLI
 FAWADA (PROS):
  + Kisi bhi free panel se tez PHP/WordPress performance
  + OpenLiteSpeed = HTTP/3, kam RAM, .htaccess support
- + PowerDNS built-in — custom nameservers aasan
+ + PowerDNS built-in - custom nameservers banana aasan
  + Free edition par unlimited domains
  + Object caching ke liye Redis built-in
 
 NUKSAAN (CONS):
- - Sirf x86_64 — ARM64 servers par NAHI chalta
+ - Sirf x86_64 - ARM64 servers par NAHI chalta
  - PostgreSQL nahi (sirf MariaDB)
  - Debian support nahi (Ubuntu + Alma/Rocky only)
  - Official uninstaller nahi (is script ka Remove option use karein)
@@ -988,7 +988,7 @@ powerful CLI (virtualmin CLI)
 
 PROS:
  + 100% free with NO paid edition at all
- + PostgreSQL + DNS + mail — full classic hosting stack
+ + PostgreSQL + DNS + mail - full classic hosting stack
  + Works on RHEL family AND Debian family, incl. ARM64
  + Extremely powerful CLI for automation
  + 20+ years of development, very stable
@@ -1009,9 +1009,9 @@ OS      : Alma/Rocky 8-10, Debian 11/12, Ubuntu 20.04-24.04
 Arch    : x86_64 + aarch64(ARM64)  RAM  : 1GB min / 2GB recommended
 
 YE KYA HAI:
-Sab se purana aur mazboot free hosting panel (Webmin par based).
+Sab se purana aur mazboot free hosting panel (Webmin par mubni).
 Sysadmin-level control deta hai: BIND DNS, mail, MySQL + PostgreSQL,
-FTP, quotas, cron, aur bara module system.
+FTP, quotas, cron aur baray modules ka poora nizam.
 
 FEATURES: websites | Apache/Nginx | MySQL + PostgreSQL | BIND DNS |
 mail | FTP | quotas | backups | resellers | 100+ Webmin modules |
@@ -1019,7 +1019,7 @@ taqatwar CLI (virtualmin CLI)
 
 FAWADA (PROS):
  + 100% free, koi paid edition hi nahi
- + PostgreSQL + DNS + mail — pura classic hosting stack
+ + PostgreSQL + DNS + mail - pura classic hosting stack
  + RHEL family aur Debian family dono, ARM64 bhi
  + Automation ke liye bohat taqatwar CLI
  + 20+ saal ka development, bohat stable
@@ -1027,7 +1027,7 @@ FAWADA (PROS):
 NUKSAAN (CONS):
  - Interface CloudPanel/aaPanel ke muqable purana lagta hai
  - Naye logon ke liye thoda mushkil seekhna
- - Default mein bohat services install karta hain (faltu band karein)
+ - Default mein yeh bohat si services install kar deta hai (faltu wale band karein)
 
 KIS KE LIYE: sysadmins, Debian/Alma users jo mukammal control aur
 automation chahte hain, free PostgreSQL hosting.
@@ -1040,7 +1040,7 @@ OS      : Debian 11/12/13, Ubuntu 22.04/24.04 (+ARM64)
 Arch    : x86_64 + aarch64(ARM64)  RAM  : 1GB min / 2GB recommended
 
 WHAT IT IS:
-A professional multi-server hosting panel — you can run web, DNS,
+A professional multi-server hosting panel - you can run web, DNS,
 mail and database servers as separate machines controlled from one
 interface. Classic choice for hosting companies.
 
@@ -1071,9 +1071,9 @@ OS      : Debian 11/12/13, Ubuntu 22.04/24.04 (+ARM64)
 Arch    : x86_64 + aarch64(ARM64)  RAM  : 1GB min / 2GB recommended
 
 YE KYA HAI:
-Professional multi-server hosting panel — web, DNS, mail aur database
-servers alag-alag machines par chala kar ek hi interface se control
-kar sakte hain. Hosting companies ki purani pasand.
+Professional multi-server hosting panel - web, DNS, mail aur database
+servers alag-alag machines par chala kar aap ek hi interface se
+control kar sakte hain. Hosting companies ki purani pasand.
 
 FEATURES: websites | Apache/Nginx | MySQL + PostgreSQL | BIND DNS |
 mail | FTP | resellers | packages/quotas | WordPress waghera ka web
@@ -1081,18 +1081,18 @@ installer | multi-server cluster
 
 FAWADA (PROS):
  + 100% free, koi paid tier nahi
- + Asal multi-server architecture (machines ke darmianan scale)
+ + Asal multi-server architecture (machines ke darmiyan scale)
  + PostgreSQL + DNS + mail shamil
  + Official auto-installer mein ARM64 support
  + Bohat configurable, neeche standard Linux packages
 
 NUKSAAN (CONS):
- - Setup CloudPanel/aaPanel se bhaari/ahista hai
+ - Setup CloudPanel/aaPanel ke muqable bhaari aur ahista hai
  - Interface kaam ka hai, modern/khoobsurat nahi
  - Official uninstaller nahi (is script ka Remove option use karein)
 
-KIS KE LIYE: hosting businesses jo aage cluster tak barhna chahte hain,
-aur jo koi classic ISP-style setup chahta hai.
+KIS KE LIYE: hosting businesses jinhein aage barh kar cluster banana
+hai, aur jo koi classic ISP-style setup chahta hai.
 EOF
         ;;
         en:fastpanel) cat >"$tmp" <<'EOF'
@@ -1152,11 +1152,11 @@ FAWADA (PROS):
 NUKSAAN (CONS):
  - Sirf x86_64 (ARM64 nahi)
  - Email se free license activation zaroori
- - Hestia/CyberPanel jitna bara community nahi
- - Bilkul fresh OS par hi install ho sakta hai
+ - Community Hestia/CyberPanel jitna bara nahi
+ - Sirf bilkul fresh OS par hi install ho sakta hai
 
-KIS KE LIYE: agencies/freelancers jinhe bina paise diye commercial-
-friendly saaf panel chahiye.
+KIS KE LIYE: agencies/freelancers jinhe bina kisi paise ke
+commercial-friendly saaf panel chahiye.
 EOF
         ;;
         en:cwp) cat >"$tmp" <<'EOF'
@@ -1168,7 +1168,7 @@ Arch    : x86_64 only              RAM  : 2GB min / 4GB recommended
 WHAT IT IS:
 An enterprise-grade free panel for the RHEL world (AlmaLinux/Rocky).
 Focuses on security and advanced server management. Root logs into
-the dashboard — it is a sysadmin tool with a GUI.
+the dashboard - it is a sysadmin tool with a GUI.
 
 FEATURES: websites | Apache/Nginx | MariaDB | PHP versions selector |
 mail | DNS | firewall + CSF | antivirus (ClamAV) | mod_security |
@@ -1183,7 +1183,7 @@ PROS:
 CONS:
  - RHEL family ONLY (no Ubuntu/Debian)
  - x86_64 only, 2GB RAM minimum (4GB recommended)
- - NO official uninstaller — official advice is "reinstall the OS"
+ - NO official uninstaller - official advice is "reinstall the OS"
    (our Remove feature does a careful best-effort cleanup)
  - Must run on a fresh OS with a static IP
 
@@ -1200,7 +1200,7 @@ Arch    : x86_64 only              RAM  : 2GB min / 4GB recommended
 YE KYA HAI:
 RHEL duniya (AlmaLinux/Rocky) ke liye enterprise-grade free panel.
 Security aur advanced server management par focus. Root dashboard par
-login karta hai — ye GUI wala sysadmin tool hai.
+login karta hai - ye GUI wala sysadmin tool hai.
 
 FEATURES: websites | Apache/Nginx | MariaDB | PHP versions selector |
 mail | DNS | firewall + CSF | antivirus (ClamAV) | mod_security |
@@ -1215,8 +1215,8 @@ FAWADA (PROS):
 NUKSAAN (CONS):
  - Sirf RHEL family (Ubuntu/Debian nahi)
  - Sirf x86_64, 2GB RAM minimum (4GB recommended)
- - Official uninstaller NAHI — company kehti hai "OS reinstall karein"
-   (hamara Remove feature ehtiyat se best-effort cleanup karta hai)
+ - Official uninstaller NAHI - company kehti hai "OS reinstall karein"
+   (is script ka Remove feature ehtiyat se best-effort cleanup karta hai)
  - Fresh OS aur static IP chahiye
 
 KIS KE LIYE: AlmaLinux/Rocky servers jahan bohat PHP apps chalti hain
@@ -1225,7 +1225,7 @@ EOF
         ;;
         *) printf 'No details found.\n' >"$tmp" ;;
     esac
-    show_file_pretty "${P_NAME[$id]} — Details" "$tmp"
+    show_file_pretty "${P_NAME[$id]} - Details" "$tmp"
     rm -f "$tmp"
 }
 
@@ -1314,7 +1314,7 @@ post_install_info() {
 install_flow() {
     local use_case
     use_case=$(ui_menu "What will you host?" \
-        "Tell us your main use case — we will rank the panels for YOUR server." \
+        "Tell us your main use case - we will rank the panels for YOUR server." \
         wp      "WordPress / PHP websites" \
         node    "Node.js / Python / Go apps" \
         email   "Email + full hosting (mail, DNS, PostgreSQL)" \
@@ -1546,7 +1546,7 @@ remove_flow() {
 
     local choice
     choice=$(ui_menu "Remove Panel Cleanly" \
-        "Detected panel(s): ${FOUND_PANELS[*]} — pick the one to remove." \
+        "Detected panel(s): ${FOUND_PANELS[*]} - pick the one to remove." \
         "${items[@]}")
     [[ -n "$choice" && "$choice" != "back" ]] || return 0
     id="$choice"
@@ -1769,7 +1769,7 @@ sec_firewall() {
             firewall-cmd --list-all 2>/dev/null || true
             ;;
         *)
-            warn "Unknown package manager — configure your firewall manually."
+            warn "Unknown package manager - configure your firewall manually."
             ;;
     esac
     warn "If you installed a panel, allow its port too (see post-install info)."
@@ -1842,7 +1842,7 @@ sec_autoupdate() {
             systemctl enable --now yum-cron >/dev/null 2>&1 || true
             ;;
         *)
-            warn "Unknown package manager — enable auto updates manually."
+            warn "Unknown package manager - enable auto updates manually."
             ;;
     esac
 }
@@ -1877,7 +1877,7 @@ sec_ssh_tips() {
 6) fail2ban + firewall (previous menu options) complete the picture.
 
 Real-world example:
-   A password is like leaving your shop key under the doormat —
+   A password is like leaving your shop key under the doormat -
    bots will find it. A key pair is like changing the lock so only
    YOUR key opens it, and nobody can brute-force a key that is
    never sent over the network.
@@ -1980,7 +1980,7 @@ guide_file() {
     if [[ "$lang" == "ur" ]]; then
         cat >"$tmp" <<'EOF'
 ================================================================
-     VPS WEBHOSTER — BEGUIDER GUIDE (ROMAN URDU)
+     VPS WEBHOSTER - BEGINNER GUIDE (ROMAN URDU)
      Banaya: Hayder        Version: 1.0.0
 ================================================================
 
@@ -1989,28 +1989,28 @@ guide_file() {
 VPS (Virtual Private Server) ek chhota sa computer hai jo internet
 par 24 ghante chalta hai. Aap use apne laptop/PC se SSH ke zariye
 control karte hain. Example: aap Karachi mein baithe hain aur aapka
-server Frankfurt mein hai — phir bhi aap usay chala sakte hain.
+server Frankfurt mein hai - phir bhi aap usay chala sakte hain.
 
 2) WEBSITE CONTROL PANEL KYA HAI?
 ----------------------------------------------------------------
 Control panel ek WEBSITE (browser) wala remote control hai. Aap
 browser mein kholte hain aur mouse se website banana, database
-banana, SSL lagana, email banana — sab kuch click-click ho jata hai.
+banana, SSL lagana, email banana - sab kuch click-click ho jata hai.
 
 Real-world misaal: Aapki car ka remote jaise aap door kholte hain
-bagair kisi technical kaam ke — theek waise hi control panel aapke
+bagair kisi technical kaam ke - theek waise hi control panel aapke
 server ka "remote" hai jo har kaam button bana deta hai.
 
 Example: Aap WordPress lagana chahte hain. Panel ke andar
-"Websites -> Add -> WordPress install" — 1 click, bas ho gaya.
+"Websites -> Add -> WordPress install" - 1 click, bas ho gaya.
 
 3) SSH KYA HAI?
 ----------------------------------------------------------------
-SSH (Secure Shell) ek COMMAND ke zariye server tak ponchnay ka
-tareeqa hai. Aap terminal/PuTTY likhte hain: "ls" (files dekho),
-"nano index.php" (file edit karo) — yani har kaam typing se hota hai.
+SSH (Secure Shell) ek COMMAND ke zariye server tak pohanchne ka
+tareeqa hai. Aap terminal/PuTTY mein likhte hain: "ls" (files dekho),
+"nano index.php" (file edit karo) - yani har kaam typing se hota hai.
 
-Real-world misaal: SSH aapke server ka "chabi wala darwaza" hai —
+Real-world misaal: SSH aapke server ka "chabi wala darwaza" hai -
 aap andar ja kar khud har cheez chhed sakte hain. Control panel
 hotel ki reception desk hai jahan aap sirf request karte hain.
 
@@ -2028,8 +2028,8 @@ hotel ki reception desk hai jahan aap sirf request karte hain.
 
 5) ASAL DUNIYA KE MISAALEN
 ----------------------------------------------------------------
-(a) Amaan ek photographer hain, unhe sirf apni portfolio site
-    chalani hai. Unhe Linux ya command nahi aati → CONTROL PANEL
+(a) Amaan ek photographer hain, unko sirf apni portfolio site
+    chalani hai. Unko Linux ya command nahi aati → CONTROL PANEL
     (aaPanel/CloudPanel) lagaya, WordPress install kiya, ho gaya.
 
 (b) Bilal developer hain, har raat code deploy karte hain aur
@@ -2045,9 +2045,9 @@ hotel ki reception desk hai jahan aap sirf request karte hain.
 6) IS SCRIPT KA TAREEKA-E-KAR
 ----------------------------------------------------------------
    sudo bash vps-webhoster.sh
-   -> Pehle system detection khulega (OS, RAM, CPU, arch)
+   -> Pehle system detection screen dikhegi (OS, RAM, CPU, arch)
    -> "Install Website Control Panel" choose karein
-   -> Poochega "What will you host?" — apna case batayein
+   -> Poochega "What will you host?" - apna case batayein
    -> Top par RECOMMENDED panel milega wajah ke saath
    -> Official installer chalega, aap sirf Enter dabate rahein
    -> Install ke baad panel URL + password screen par aayega
@@ -2055,15 +2055,15 @@ hotel ki reception desk hai jahan aap sirf request karte hain.
 7) JUNK CLEANER KYA KARTA HAI?
 ----------------------------------------------------------------
 Package cache, faltu packages, purane logs, journal, /tmp ki purani
-files, trash aur purane kernels saaf karta hai — DISK pehle/baad
-batata hai kitni jagah bani. Aapki WEBSITE FILES aur DATABASES
+files, trash aur purane kernels saaf karta hai - DISK pehle/baad
+batata hai kitni jagah khali hui. Aapki WEBSITE FILES aur DATABASES
 kabhi nahi chhoota.
 
 8) REMOVE PANEL CLEANLY KYA KARTA HAI?
 ----------------------------------------------------------------
 Panel ki services band karta hai, packages aur files delete karta
-hai, users hata deta hai, ports check karta hai. Aap pooch sakta
-hain poora web stack (nginx/apache/mysql) bhi utaarein ya na.
+hai, users hata deta hai, ports check karta hai. Aap pooch sakte
+hain ke poora web stack (nginx/apache/mysql) bhi utaarein ya na.
 ZAROORI: Pehle backup lein!
 
 9) PEHLA KAAM (INSTALL KE BAAD)
@@ -2084,21 +2084,21 @@ ZAROORI: Pehle backup lein!
 - PostgreSQL : aur advanced SQL database (Hestia/ISPConfig/Virtualmin)
 - DNS      : domain ko IP se jorna (panel apna DNS server bhi chalata hai)
 - SSL/HTTPS: green lock, encryption (Let's Encrypt free hai)
-- Varnish/Redis : caching — site ko tez banate hain
+- Varnish/Redis : caching - site ko tez banate hain
 - Firewall : bahar se aane wale traffic ki security gate
 - fail2ban : brute-force attackers ko automatically ban karta hai
-- RAM/CPU  : server ki memory aur processor — panel chunne mein matter
+- RAM/CPU  : server ki memory aur processor - panel chunne mein matter
              karta hai
 
 --------------------------------------------------------------
- "Pehle samjho, phir chalao." — Har command se pehle sochein.
+ "Pehle samjho, phir chalao." - Har command se pehle sochein.
  Made by Hayder. Documentation: docs/ur/ folder mein mukammal.
 ============================================================
 EOF
     else
         cat >"$tmp" <<'EOF'
 ================================================================
-     VPS WEBHOSTER — BEGINNER GUIDE (ENGLISH)
+     VPS WEBHOSTER - BEGINNER GUIDE (ENGLISH)
      Made by Hayder        Version: 1.0.0
 ================================================================
 
@@ -2106,21 +2106,21 @@ EOF
 ----------------------------------------------------------------
 A VPS (Virtual Private Server) is a small computer that runs 24/7
 in a datacenter. You control it from your own laptop through SSH.
-Example: you sit in London, your server runs in Frankfurt — you
+Example: you sit in London, your server runs in Frankfurt - you
 still fully control it.
 
 2) WHAT IS A WEBSITE CONTROL PANEL?
 ----------------------------------------------------------------
 A control panel is a BROWSER-BASED remote control for your server.
 You click buttons to create websites, databases, SSL certificates
-and email — no commands needed.
+and email - no commands needed.
 
-Real-world example: like a TV remote — you change channels without
+Real-world example: like a TV remote - you change channels without
 touching the wiring inside the TV. The panel turns every server
 task into a button.
 
 Practical example: you want WordPress installed. In the panel:
-"Websites -> Add -> WordPress" — one click, done.
+"Websites -> Add -> WordPress" - one click, done.
 
 3) WHAT IS SSH?
 ----------------------------------------------------------------
@@ -2129,9 +2129,9 @@ terminal. You TYPE everything: "ls" to list files,
 "nano index.php" to edit a file, "systemctl restart nginx" to
 restart the web server.
 
-Real-world example: SSH is the door with a key — you walk in and
+Real-world example: SSH is the door with a key - you walk in and
 touch everything yourself. The control panel is the hotel reception
-desk — you just make requests and they handle it.
+desk - you just make requests and they handle it.
 
 4) THE DIFFERENCE: CONTROL PANEL vs SSH
 ----------------------------------------------------------------
@@ -2175,7 +2175,7 @@ desk — you just make requests and they handle it.
 7) WHAT DOES THE JUNK CLEANER DO?
 ----------------------------------------------------------------
 It clears package caches, orphan packages, old logs, the systemd
-journal, /tmp files older than 7 days, trash and old kernels —
+journal, /tmp files older than 7 days, trash and old kernels -
 and reports disk space before/after. It NEVER touches your website
 files or databases.
 
@@ -2203,13 +2203,13 @@ web stack (nginx/apache/mysql). ALWAYS BACK UP FIRST.
 - PostgreSQL : an advanced SQL database (Hestia/ISPConfig/Virtualmin)
 - DNS        : connects a domain name to an IP address
 - SSL/HTTPS  : the green lock, encryption (Let's Encrypt = free)
-- Varnish/Redis : caching — makes sites much faster
+- Varnish/Redis : caching - makes sites much faster
 - Firewall   : the security gate for incoming traffic
 - fail2ban   : auto-bans brute-force attackers
-- RAM/CPU    : memory & processor — they decide which panel fits
+- RAM/CPU    : memory & processor - they decide which panel fits
 
 --------------------------------------------------------------
- "Understand first, then run." — Think before every command.
+ "Understand first, then run." - Think before every command.
  Made by Hayder. Full documentation lives in docs/en/.
 ============================================================
 EOF
@@ -2308,7 +2308,7 @@ about() {
 
  Version   : $SCRIPT_VERSION
  Author    : $SCRIPT_AUTHOR  (made with care for beginners)
- License   : MIT — free to use, share and modify
+ License   : MIT - free to use, share and modify
  Repository: $REPO_URL
  Log file  : $LOG_FILE
 
@@ -2324,7 +2324,7 @@ about() {
    Virtualmin GPL, ISPConfig, FastPanel, CWP
 
  Paid panels like cPanel, Plesk and DirectAdmin are NOT included
- on purpose — this project is 100% free.
+ on purpose - this project is 100% free.
 
  Docs (English + Roman Urdu): see the docs/ folder on GitHub.
 
@@ -2341,7 +2341,7 @@ main_menu() {
     local choice
     while true; do
         detect_installed_panels
-        choice=$(ui_menu "$SCRIPT_NAME v$SCRIPT_VERSION — Made by $SCRIPT_AUTHOR" \
+        choice=$(ui_menu "$SCRIPT_NAME v$SCRIPT_VERSION - Made by $SCRIPT_AUTHOR" \
             "Detected: $OS_PRETTY | $ARCH_OK | ${RAM_GB}GB RAM | ${CORES} core(s)${FOUND_PANELS:+ | panel: ${FOUND_PANELS[*]}}" \
             info     "System Detection & Info" \
             install  "Install Website Control Panel (recommended on top)" \

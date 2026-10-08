@@ -1,8 +1,8 @@
-# 📘 Beginner Guide — Control Panels, SSH & Your VPS
+# 📘 Beginner Guide - Control Panels, SSH & Your VPS
 
 > **Language:** **English** | [اردو (Roman Urdu)](../ur/beginner-guide.md)
 >
-> Part of **VPS WebHoster** — [back to README](../../README.md)
+> Part of **VPS WebHoster** - [back to README](../../README.md)
 
 This guide is written for someone who has **never** touched a server before.
 No jargon without an explanation. Read it once and you will understand more
@@ -15,7 +15,7 @@ about servers than most people who "have a hosting account".
 1. [What is a server / VPS?](#1-what-is-a-server--vps)
 2. [What is a website control panel?](#2-what-is-a-website-control-panel)
 3. [What is SSH?](#3-what-is-ssh)
-4. [Control panel vs SSH — the real difference](#4-control-panel-vs-ssh--the-real-difference)
+4. [Control panel vs SSH - the real difference](#4-control-panel-vs-ssh--the-real-difference)
 5. [Real-world examples that make it click](#5-real-world-examples-that-make-it-click)
 6. [How to connect with SSH (step by step)](#6-how-to-connect-with-ssh-step-by-step)
 7. [Which should YOU use?](#7-which-should-you-use)
@@ -34,7 +34,7 @@ with its own RAM, CPU, disk and IP address. You rent it monthly from providers
 like Hetzner, Vultr, DigitalOcean, Contabo, etc.
 
 **Real-world analogy:** a VPS is like renting a small shop in a big mall. The
-mall (datacenter) provides electricity and security; the shop (VPS) is yours —
+mall (datacenter) provides electricity and security; the shop (VPS) is yours -
 you decide what goes inside.
 
 ---
@@ -51,7 +51,7 @@ Websites → Add Website → domain.com → pick PHP version → Install WordPre
 ```
 
 Behind the scenes it edits Nginx config files, creates databases, issues SSL
-certificates, sets cron jobs — all the things you would otherwise type.
+certificates, sets cron jobs - all the things you would otherwise type.
 
 **Real-world analogy:** a control panel is the **remote control of your TV**.
 You change channels and volume by pressing buttons, without ever touching the
@@ -59,7 +59,7 @@ wiring inside the TV.
 
 Or another one: it is the **reception desk of a hotel**. You say "I need a
 room for 2 nights" and they handle keys, registration and billing. You never
-see the kitchen, laundry or accounting — that's the server's internals.
+see the kitchen, laundry or accounting - that's the server's internals.
 
 **What you can usually do from a panel:**
 
@@ -75,8 +75,8 @@ see the kitchen, laundry or accounting — that's the server's internals.
 
 ## 3. What is SSH?
 
-**SSH (Secure Shell)** is an **encrypted connection to your server's terminal**
-— the place where you *type commands*.
+**SSH (Secure Shell)** is an **encrypted connection to your server's terminal**,
+the place where you *type commands*.
 
 With SSH you get a black window (terminal) and full control:
 
@@ -88,21 +88,21 @@ htop                    # watch RAM/CPU live
 ```
 
 **Real-world analogy:** SSH is **your own key to the server's door**. You walk
-into the room and touch everything yourself — powerful, but you can also knock
+into the room and touch everything yourself - powerful, but you can also knock
 something over. The control panel is the hotel desk: you request, they do.
 
 **Why "secure"?** Everything between your computer and the server is
-encrypted — passwords, files, commands. Plain old FTP is *not* encrypted,
+encrypted - passwords, files, commands. Plain old FTP is *not* encrypted,
 which is why SSH replaced it.
 
 ---
 
-## 4. Control panel vs SSH — the real difference
+## 4. Control panel vs SSH - the real difference
 
 | Aspect | 🖥️ Control Panel | ⌨️ SSH |
 |---|---|---|
 | How it looks | Web page, buttons, forms | Black terminal, typed commands |
-| Learning curve | Easy — hours | Steeper — days/weeks |
+| Learning curve | Easy - hours | Steeper - days/weeks |
 | Speed for beginners | Fast (point & click) | Slow at first |
 | Speed for experts | Slower (menus) | Very fast (scripted) |
 | What you can touch | Only what the panel exposes | **Everything** |
@@ -111,7 +111,7 @@ which is why SSH replaced it.
 | Best for | Bloggers, shop owners, clients | Developers, sysadmins |
 | Works without internet browser? | No | Yes (terminal only) |
 
-**They are not rivals — they are teammates.**
+**They are not rivals - they are teammates.**
 Most people use the panel for daily work and SSH for the 5% of tasks the panel
 cannot do (special tuning, debugging, one-off scripts).
 
@@ -119,7 +119,7 @@ cannot do (special tuning, debugging, one-off scripts).
 
 ## 5. Real-world examples that make it click
 
-### Example A — the photographer (panel person)
+### Example A - the photographer (panel person)
 
 Amaan takes photos and wants `amaanphotos.com` with a portfolio gallery. He
 does not know what a terminal is. He:
@@ -134,7 +134,7 @@ Her site is live in ~10 minutes without typing a single command.
 PHP, creating a MySQL database by hand, configuring certbot… 40+ minutes of
 stress for someone who just wanted a portfolio.
 
-### Example B — the developer (SSH person)
+### Example B - the developer (SSH person)
 
 Bilal deploys his app every night. He writes one script:
 
@@ -149,18 +149,18 @@ pm2 restart app
 would be *slower*. He still opens the panel occasionally to read logs or check
 SSL expiry with his eyes.
 
-### Example C — the hosting company (both)
+### Example C - the hosting company (both)
 
 Sara sells hosting to 50 clients. She uses a **reseller-capable panel**
 (HestiaCP or ISPConfig) so each client gets their own limited login, and she
 uses SSH for server-level maintenance. The panel is her shop front; SSH is
 her workshop.
 
-### Example D — the tiny 1 GB VPS (why this script exists)
+### Example D - the tiny 1 GB VPS (why this script exists)
 
 You bought the cheapest 1 GB VPS. Installing a heavy panel means constant
 swapping and a slow server. **VPS WebHoster** measures your RAM/CPU/OS and
-puts the *right* panel on top — for 1 GB it recommends aaPanel (runs from
+puts the *right* panel on top - for 1 GB it recommends aaPanel (runs from
 512 MB), for 4 GB it may recommend HestiaCP with mail + DNS.
 
 ---
@@ -180,7 +180,7 @@ Password      : (or an SSH key file)
 1. Install **PuTTY** from <https://www.putty.org/> (or use *Windows Terminal* + `ssh`)
 2. Host Name: `203.0.113.10`, Port: `22` → click **Open**
 3. Accept the fingerprint → type `root` → type the password
-   *(the password is invisible while typing — that's normal)*
+   *(the password is invisible while typing - that's normal)*
 
 ```text
 login as: root
@@ -214,9 +214,9 @@ sudo bash vps-webhoster.sh
 
 ### Password vs key (important)
 
-- **Password** — like leaving your shop key under the doormat. Bots scan the
+- **Password** - like leaving your shop key under the doormat. Bots scan the
   whole internet trying passwords every minute.
-- **SSH key** — a 2-part keypair; the private half never travels the network,
+- **SSH key** - a 2-part keypair; the private half never travels the network,
   so it cannot be brute-forced.
 
 Create keys on *your* computer:
@@ -241,7 +241,7 @@ Ask yourself one question: **"Do I enjoy typing commands?"**
 | A blogger / freelancer / shop owner | **Control panel** (this script picks one for you) |
 | A developer who deploys code | **SSH** (+ panel only for databases/SSL) |
 | Running a hosting business | **Panel with resellers** (HestiaCP, ISPConfig) |
-| On a 512 MB–1 GB VPS | **Light panel** (aaPanel) — the script will recommend it |
+| On a 512 MB–1 GB VPS | **Light panel** (aaPanel) - the script will recommend it |
 | Learning Linux seriously | SSH first, add a panel later |
 
 **The honest answer:** a control panel gets your first website online today;
@@ -267,7 +267,7 @@ one SSH command per week, and within a month you won't fear either.
 | **Firewall** | Gatekeeper deciding which traffic may enter |
 | **fail2ban** | Auto-bans IPs that keep guessing your password |
 | **Domain** | The human-readable address of your site |
-| **cPanel / Plesk** | Famous **paid** panels — intentionally not in this script |
+| **cPanel / Plesk** | Famous **paid** panels - intentionally not in this script |
 | **Freemium** | Free core + paid extras (aaPanel Pro, CyberPanel Pro, CWP) |
 
 ---
@@ -275,16 +275,27 @@ one SSH command per week, and within a month you won't fear either.
 ## 9. First steps after buying a VPS
 
 1. **Connect with SSH** (section 6)
-2. **Update the system** — `apt update && apt upgrade -y` or `dnf update -y`
-3. **Run this script** — `sudo bash vps-webhoster.sh`
+2. **Update the system** - `apt update && apt upgrade -y` or `dnf update -y`
+3. **Run this script** - `sudo bash vps-webhoster.sh`
 4. **Install the recommended panel** from the menu
 5. **Open the panel port** (8083/8443/8090/…) in your provider's
-   firewall/security group — cloud firewalls block ports *before* your server
+   firewall/security group - cloud firewalls block ports *before* your server
    even sees the traffic
 6. **Change every default password immediately**
 7. **Turn on** firewall + fail2ban + auto-updates (Security menu)
-8. **Schedule backups** — a server without a backup is a server you don't own
+8. **Schedule backups** - a server without a backup is a server you don't own
 9. **Add your first website** from inside the panel 🎉
+
+---
+
+## 📚 More beginner guides
+
+| Guide | What you'll learn |
+|---|---|
+| [What is SSH?](./what-is-ssh.md) | Deep dive: keys vs passwords, PuTTY, tunnels, every error explained |
+| [What is a WAF?](./what-is-waf.md) | Web Application Firewall, SQLi/XSS, enabling it on each panel |
+| [Linux for Windows users](./linux-for-windows-users.md) | What a distribution is, Debian vs RHEL, Windows↔Linux translation |
+| [Linux commands cheat sheet](./linux-commands.md) | 100+ commands with definitions, examples and when to use them |
 
 ---
 
